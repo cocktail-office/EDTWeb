@@ -1,0 +1,223 @@
+CRIDatePicker1: CRIDatePicker {
+	dateValue = dateDebut;
+	fieldName = "dateDebut";
+	formName = "ajoutAgenda";
+}
+
+CRIDatePicker2: CRIDatePicker {
+	dateValue = dateFin;
+	fieldName = "dateFin";
+	formName = "ajoutAgenda";
+}
+
+CheckBox1: WOCheckBox {
+	checked = lundi;
+}
+
+CheckBox2: WOCheckBox {
+	checked = mardi;
+}
+
+CheckBox3: WOCheckBox {
+	checked = mercredi;
+}
+
+CheckBox4: WOCheckBox {
+	checked = jeudi;
+}
+
+CheckBox5: WOCheckBox {
+	checked = vendredi;
+}
+
+CheckBox6: WOCheckBox {
+	checked = samedi;
+}
+
+CheckBox7: WOCheckBox {
+	checked = dimanche;
+}
+
+Conditional1: WOConditional {
+	condition = selectionPlusieurJour;
+	negate = true;
+}
+
+Conditional2: WOConditional {
+	condition = selectionPlusieurJour;
+}
+
+Conditional3: WOConditional {
+	condition = isErreur;
+}
+
+Conditional4: WOConditional {
+	condition = affiche;
+	negate = true;
+}
+
+Conditional5: WOConditional {
+	condition = affiche;
+}
+
+Conditional6: WOConditional {
+	condition = true;
+}
+
+Conditional7: WOConditional {
+	condition = true;
+}
+
+Conditional8: WOConditional {
+	condition = true;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+	name = "ajoutAgenda";
+	id = "ajoutAgenda";
+	enctype = "application/x-www-form-urlencoded; charset=UTF-8";
+}
+
+PopUpButton2: WOPopUpButton {
+	list = listeDate;
+	selection = selectedYear;
+	item = aYear;
+	displayString = affichageYear;
+}
+
+RadioButton1: WORadioButton {
+	name = "Enregistrment";
+	selection = typeEnregistrment;
+	value = typePrive;
+}
+
+RadioButton2: WORadioButton {
+	name = "Enregistrment";
+	selection = typeEnregistrment;
+	value = typePublic;
+}
+
+RadioButton3: WORadioButton {
+	name = "Enregistrment";
+	selection = typeEnregistrment;
+	value = typeService;
+}
+
+String1: WOString {
+	escapeHTML = false;
+	value = erreurEnregistrement;
+}
+
+String10: WOString {
+	value = jourFin.nomDuMois;
+	escapeHTML = false;
+}
+
+String11: WOString {
+	value = jourFin.annee;
+}
+
+String2: WOString {
+	value = jourDebut.toStringComplet;
+}
+
+String3: WOString {
+	value = jourFin.toStringComplet;
+}
+
+String4: WOString {
+	value = jourDebut.nomDuJour;
+}
+
+String5: WOString {
+	value = jourDebut.numJour;
+}
+
+String6: WOString {
+	value = jourDebut.nomDuMois;
+	escapeHTML = false;
+}
+
+String7: WOString {
+	value = jourDebut.annee;
+}
+
+String8: WOString {
+	value = jourFin.numJour;
+}
+
+String9: WOString {
+	value = jourFin.nomDuJour;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = annuler;
+	class = "bouton";
+	value = "Annuler";
+}
+
+SubmitButton2: WOSubmitButton {
+	action = faireReservation;
+	class = "bouton";
+	value = "Enregistrer";
+}
+
+Text1: WOText {
+	cols = 30;
+	rows = 5;
+	value = objetResa;
+}
+
+TextField10: WOTextField {
+	size = 30;
+	value = listeSemaine;
+}
+
+TextField2: WOTextField {
+	value = heureDebut;
+	align = "right";
+	size = 2;
+}
+
+TextField3: WOTextField {
+	value = minuteDebut;
+	align = "right";
+	size = 2;
+}
+
+TextField4: WOTextField {
+	value = heureFin;
+	align = "right";
+	size = 2;
+}
+
+TextField5: WOTextField {
+	value = minuteFin;
+	align = "right";
+	size = 2;
+}
+
+TextField6: WOTextField {
+	value = minuteFin;
+	align = "right";
+	size = 2;
+}
+
+TextField7: WOTextField {
+	value = heureFin;
+	align = "right";
+	size = 2;
+}
+
+TextField8: WOTextField {
+	value = minuteDebut;
+	align = "right";
+	size = 2;
+}
+
+TextField9: WOTextField {
+	value = heureDebut;
+	align = "right";
+	size = 2;
+}

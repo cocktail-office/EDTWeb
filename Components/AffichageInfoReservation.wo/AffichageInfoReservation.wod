@@ -1,0 +1,127 @@
+Conditional1: WOConditional {
+	condition = false;
+}
+
+Conditional2: WOConditional {
+	condition = isIndividu;
+}
+
+Conditional3: WOConditional {
+	condition = application.activationModif;
+}
+
+Conditional4: WOConditional {
+	condition = application.activationSupp;
+}
+
+Conditional5: WOConditional {
+	condition = isModifiable;
+}
+
+Conditional6: WOConditional {
+	condition = isSupprimable;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+FormFermer: WOForm {
+	action=fermerLaFenetre;
+	name="FormFermerLaFenetre";
+	target="pageprincipaleedtweb";
+}
+
+FormFermerEnt: WOForm {
+	action=fermerLaFenetre;
+	name="FormFermerLaFenetreEnt";
+}
+
+ButtonFermerFenetre: WOSubmitButton {
+	alt = "Fermer";
+	value = "Fermer";
+	action = fermerLaFenetre;
+	class = "bouton";
+	onclick =btnFermerOnClick;
+	name = "BtnFermer";
+}
+
+ButtonFermerFenetreEnt: WOSubmitButton {
+	alt = "Fermer";
+	value = "Fermer";
+	action = fermerLaFenetre;
+	class = "bouton";
+	onclick =btnFermerEntOnClick;
+	name = "BtnFermerEnt";
+}
+
+Repetition1: WORepetition {
+	item = aResaExam;
+	list = listeResaExam;
+}
+
+String1: WOString {
+	escapeHTML = false;
+	value = nomEtPrenom;
+}
+
+String10: WOString {
+	value = aResaExam.toScolExamenEntete.eentCoefficient;//valid
+}
+
+String11: WOString {
+	value = aResaExam.toScolExamenEntete.eentDateDebut.toString;//valid
+}
+
+String12: WOString {
+	value = aResaExam.toScolExamenEntete.eentDateFin.toString;//valid
+}
+
+String2: WOString {
+	value = aResaExam.toScolExamenEntete.eentLibelle;//valid
+}
+
+String3: WOString {
+	escapeHTML = false;
+	value = sujet;
+}
+
+String4: WOString {
+	value = dateDebut;
+	dateformat = "le %d / %m / %Y  &agrave;  %H:%M";
+	escapeHTML = false;
+}
+
+String5: WOString {
+	value = dateFin;
+	dateformat = "le %d / %m / %Y  &agrave;  %H:%M";
+	escapeHTML = false;
+}
+
+String6: WOString {
+	value = aResaExam.toScolExamenEntete.eentEpreuve;//valid
+}
+
+String7: WOString {
+	value = aResaExam.toScolExamenEntete.eentDuree;//valid
+}
+
+String8: WOString {
+	value = aResaExam.toScolExamenEntete.eentSession;//valid
+}
+
+String9: WOString {
+	value = aResaExam.toScolExamenEntete.eentSemestre;//valid
+}
+
+SubmitButton1: WOSubmitButton {
+	action = modiferResa;
+	class = "bouton";
+	value = "Modifier";
+}
+
+SubmitButton2: WOSubmitButton {
+	action = supprimerResa;
+	class = "bouton";
+	value = "Supprimer";
+}

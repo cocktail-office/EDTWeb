@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="var" path="NEXT_LOCAL_ROOT/Library/WebObjects/Extensions/mail.jar"/>
+	<classpathentry kind="var" path="NEXT_LOCAL_ROOT/Library/WebObjects/Extensions/commons-discovery-0.2.jar"/>
+	<classpathentry kind="var" path="NEXT_LOCAL_ROOT/Library/WebObjects/Extensions/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="var" path="NEXT_LOCAL_ROOT/Library/WebObjects/Extensions/jaxrpc.jar"/>
+	<classpathentry kind="var" path="NEXT_LOCAL_ROOT/Library/WebObjects/Extensions/saaj.jar"/>
+	<classpathentry kind="var" path="NEXT_LOCAL_ROOT/Library/WebObjects/Extensions/wsdl4j-1.5.1.jar"/>
+	<classpathentry kind="var" path="NEXT_LOCAL_ROOT/Library/WebObjects/Extensions/axis.jar"/>
+	<classpathentry kind="var" path="NEXT_LOCAL_ROOT/Library/WebObjects/Extensions/activation.jar"/>
+	<classpathentry kind="var" path="NEXT_LOCAL_ROOT/Library/WebObjects/Extensions/servlet.jar"/>
+	<classpathentry kind="var" path="NEXT_LOCAL_ROOT/Library/WebObjects/Extensions/ojdbc14.jar"/>
+	<classpathentry kind="con" path="WOFramework/CRIWebApp3"/>
+	<classpathentry kind="con" path="WOFramework/CRIWebExt3"/>
+	<classpathentry kind="con" path="WOFramework/ServeurPlanningFwk"/>
+	<classpathentry kind="con" path="WOFramework/JavaWOExtensions"/>
+	<classpathentry kind="con" path="WOFramework/JavaEOAccess"/>
+	<classpathentry kind="con" path="WOFramework/JavaEOControl"/>
+	<classpathentry kind="con" path="WOFramework/JavaFoundation"/>
+	<classpathentry kind="con" path="WOFramework/JavaJDBCAdaptor"/>
+	<classpathentry kind="con" path="WOFramework/JavaWebObjects"/>
+	<classpathentry kind="con" path="WOFramework/JavaWebServicesClient"/>
+	<classpathentry kind="con" path="WOFramework/JavaWebServicesSupport"/>
+	<classpathentry kind="con" path="WOFramework/JavaXML"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

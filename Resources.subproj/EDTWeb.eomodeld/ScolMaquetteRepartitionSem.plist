@@ -1,0 +1,90 @@
+{
+    attributes = (
+        {
+            columnName = "FANN_KEY"; 
+            externalType = NUMBER; 
+            name = fannKey; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = "MPAR_KEY"; 
+            externalType = NUMBER; 
+            name = mparKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = "MRSEM_KEY"; 
+            externalType = NUMBER; 
+            name = mrsemKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = "MSEM_KEY"; 
+            externalType = NUMBER; 
+            name = msemKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }
+    ); 
+    attributesUsedForLocking = (fannKey, mparKey, mrsemKey, msemKey); 
+    className = "org.cocktail.edtweb.server.metier.ScolMaquetteRepartitionSem"; 
+    classProperties = (
+        fannKey, 
+        mparKey, 
+        mrsemKey, 
+        msemKey, 
+        scolFormationAnnee, 
+        scolMaquetteParcours, 
+        scolMaquetteSemestre
+    ); 
+    externalName = "SCOLARITE.SCOL_MAQUETTE_REPARTITION_SEM"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (
+            fannKey, 
+            mparKey, 
+            mrsemKey, 
+            msemKey, 
+            scolFormationAnnee, 
+            scolMaquetteParcours, 
+            scolMaquetteSemestre
+        ); 
+        "_javaClientClassName" = "org.cocktail.edtweb.server.client.ScolMaquetteRepartitionSem"; 
+        "_nameInObjectStore" = "SCOL_MAQUETTE_REPARTITION_SEM"; 
+    }; 
+    name = ScolMaquetteRepartitionSem; 
+    primaryKeyAttributes = (mrsemKey); 
+    relationships = (
+        {
+            destination = ScolFormationAnnee; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = fannKey; sourceAttribute = fannKey; }); 
+            name = scolFormationAnnee; 
+        }, 
+        {
+            destination = ScolMaquetteParcours; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = mparKey; sourceAttribute = mparKey; }); 
+            name = scolMaquetteParcours; 
+        }, 
+        {
+            destination = ScolMaquetteSemestre; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = msemKey; sourceAttribute = msemKey; }); 
+            name = scolMaquetteSemestre; 
+        }
+    ); 
+}

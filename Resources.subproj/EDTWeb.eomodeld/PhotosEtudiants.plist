@@ -1,0 +1,30 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "DATAS_PHOTO"; 
+            externalType = BLOB; 
+            name = datasPhoto; 
+            valueClassName = NSData; 
+        }, 
+        {
+            columnName = "NO_INDIVIDU"; 
+            externalType = NUMBER; 
+            name = noIndividu; 
+            serverTimeZone = "Europe/Paris"; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }
+    ); 
+    attributesUsedForLocking = (datasPhoto, noIndividu); 
+    className = EOGenericRecord; 
+    classProperties = (datasPhoto, noIndividu); 
+    externalName = "GRHUM.PHOTOS_ETUDIANTS_GRHUM"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (datasPhoto, noIndividu); 
+        "_nameInObjectStore" = "PHOTOS_ETUDIANTS_GRHUM@BLOBS.world"; 
+    }; 
+    name = PhotosEtudiants; 
+    primaryKeyAttributes = (noIndividu); 
+}

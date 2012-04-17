@@ -1,0 +1,197 @@
+{
+    attributes = (
+        {
+            columnName = "FANN_KEY"; 
+            externalType = NUMBER; 
+            name = fannKey; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = "MSEM_BONIFIABLE"; 
+            externalType = NUMBER; 
+            name = msemBonifiable; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MSEM_DATE_DEBUT"; 
+            externalType = DATE; 
+            name = msemDateDebut; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MSEM_DATE_FIN"; 
+            externalType = DATE; 
+            name = msemDateFin; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = "MSEM_HORAIRE_ETU"; 
+            externalType = NUMBER; 
+            name = msemHoraireEtu; 
+            precision = 5; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            columnName = "MSEM_KEY"; 
+            externalType = NUMBER; 
+            name = msemKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = "MSEM_NOTE_BASE"; 
+            externalType = NUMBER; 
+            name = msemNoteBase; 
+            precision = 5; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MSEM_NOTE_ELIMINATION"; 
+            externalType = NUMBER; 
+            name = msemNoteElimination; 
+            precision = 5; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            columnName = "MSEM_NOTE_OBTENTION"; 
+            externalType = NUMBER; 
+            name = msemNoteObtention; 
+            precision = 5; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            columnName = "MSEM_ORDRE"; 
+            externalType = NUMBER; 
+            name = msemOrdre; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MSEM_SEMAINE_SESSION1"; 
+            externalType = NUMBER; 
+            name = msemSemaineSession1; 
+            precision = 2; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MSEM_SEMAINE_SESSION2"; 
+            externalType = NUMBER; 
+            name = msemSemaineSession2; 
+            precision = 2; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        fannKey, 
+        msemBonifiable, 
+        msemDateDebut, 
+        msemDateFin, 
+        msemHoraireEtu, 
+        msemKey, 
+        msemNoteBase, 
+        msemNoteElimination, 
+        msemNoteObtention, 
+        msemOrdre, 
+        msemSemaineSession1, 
+        msemSemaineSession2
+    ); 
+    className = "org.cocktail.edtweb.server.metier.ScolMaquetteSemestre"; 
+    classProperties = (
+        fannKey, 
+        msemBonifiable, 
+        msemDateDebut, 
+        msemDateFin, 
+        msemHoraireEtu, 
+        msemKey, 
+        msemNoteBase, 
+        msemNoteElimination, 
+        msemNoteObtention, 
+        msemOrdre, 
+        msemSemaineSession1, 
+        msemSemaineSession2, 
+        scolFormationAnnee, 
+        scolMaquetteRepartitionSems, 
+        scolMaquetteRepartitionUes, 
+        tosScolGroupeObjet
+    ); 
+    externalName = "SCOLARITE.SCOL_MAQUETTE_SEMESTRE"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (
+            fannKey, 
+            msemBonifiable, 
+            msemDateDebut, 
+            msemDateFin, 
+            msemHoraireEtu, 
+            msemKey, 
+            msemNoteBase, 
+            msemNoteElimination, 
+            msemNoteObtention, 
+            msemOrdre, 
+            msemSemaineSession1, 
+            msemSemaineSession2, 
+            scolFormationAnnee, 
+            scolMaquetteRepartitionSems, 
+            scolMaquetteRepartitionUes, 
+            tosScolGroupeObjet
+        ); 
+        "_javaClientClassName" = "org.cocktail.edtweb.server.client.ScolMaquetteSemestre"; 
+        "_nameInObjectStore" = "SCOL_MAQUETTE_SEMESTRE"; 
+    }; 
+    name = ScolMaquetteSemestre; 
+    primaryKeyAttributes = (msemKey); 
+    relationships = (
+        {
+            destination = ScolFormationAnnee; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = fannKey; sourceAttribute = fannKey; }); 
+            name = scolFormationAnnee; 
+        }, 
+        {
+            destination = ScolMaquetteRepartitionSem; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = msemKey; sourceAttribute = msemKey; }); 
+            name = scolMaquetteRepartitionSems; 
+        }, 
+        {
+            destination = ScolMaquetteRepartitionUe; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = msemKey; sourceAttribute = msemKey; }); 
+            name = scolMaquetteRepartitionUes; 
+        }, 
+        {
+            destination = ScolGroupeObjet; 
+            isToMany = Y; 
+            joinSemantic = EOFullOuterJoin; 
+            joins = ({destinationAttribute = msemKey; sourceAttribute = msemKey; }); 
+            name = tosScolGroupeObjet; 
+        }
+    ); 
+}

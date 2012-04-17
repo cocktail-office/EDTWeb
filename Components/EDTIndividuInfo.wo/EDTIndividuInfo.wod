@@ -1,0 +1,90 @@
+Conditional1: WOConditional {
+	condition = photoIndividu;
+}
+
+Conditional2: WOConditional {
+	condition = false;
+}
+
+Conditional4: WOConditional {
+	condition = isEtudiant;
+}
+
+Hyperlink1: WOHyperlink {
+	class = "menuItem";
+	href = directActionIcal;
+	title = "Cliquer ici pour avoir votre agenda public au format iCAL";
+}
+
+Hyperlink2: WOHyperlink {
+	class = "menuItem";
+	href = directActionIcal;
+	title = "Agenda public &eacute;tudiant iCAL (&agrave; visualiser dans votre lightning/sunbird/ical/GoogleAgenda pr&eacute;f&eacute;r&eacute;)";
+}
+
+Hyperlink3: WOHyperlink {
+	action = voirPhoto;
+}
+
+Hyperlink4: WOHyperlink {
+	href = mailto;
+}
+
+Image1: WOImage {
+	border = 0;
+	data = photoIndividu;
+	mimeType = "image/gif";
+	width = 140;
+}
+
+Image2: WOImage {
+	border = 0;
+	filename = "info.gif";
+	framework = "app";
+	height = "13";
+	width = "13";
+}
+
+Image3: WOImage {
+	border = 0;
+	filename = "info.gif";
+	framework = "app";
+	height = 13;
+	width = 13;
+}
+
+String1: WOString {
+	value = user.adrCivilite;
+}
+
+String2: WOString {
+	value = email;
+}
+
+String3: WOString {
+	value = user.adrNom;
+}
+
+String4: WOString {
+	value = user.adrPrenom;
+}
+
+String5: WOString {
+	value = user.adrPrenom;
+}
+
+String6: WOString {
+	value = user.adrQualite;
+}
+
+String7: WOString {
+	value = user.adrNom;
+}
+
+String8: WOString {
+	value = user.adrCivilite;
+}
+
+String9: WOString {
+	value = userFonction;
+}

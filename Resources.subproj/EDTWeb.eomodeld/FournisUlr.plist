@@ -1,0 +1,29 @@
+{
+    attributes = (
+        {
+            columnName = FOU_ORDRE; 
+            externalType = NUMBER; 
+            name = fouOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = PERS_ID; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }
+    ); 
+    attributesUsedForLocking = (fouOrdre, persId); 
+    className = EOGenericRecord; 
+    classProperties = (persId); 
+    externalName = GRHUM.FOURNIS_ULR; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        _clientClassPropertyNames = (persId); 
+        _javaClientClassName = EOGenericRecord; 
+    }; 
+    name = FournisUlr; 
+    primaryKeyAttributes = (fouOrdre); 
+}

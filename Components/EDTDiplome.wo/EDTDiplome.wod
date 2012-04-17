@@ -1,0 +1,299 @@
+Conditional1: WOConditional {
+	condition = showPlanning;
+}
+
+Conditional10: WOConditional {
+	condition = isLastSemestre;
+	negate = true;
+}
+
+Conditional11: WOConditional {
+	condition = parcoursHasSemestres;
+}
+
+Conditional12: WOConditional {
+	condition = parcoursHasSemestres;
+}
+
+Conditional13: WOConditional {
+	condition = isLastSemestre;
+	negate = true;
+}
+
+Conditional14: WOConditional {
+	condition = groupeSelected;
+	negate = true;
+}
+
+Conditional15: WOConditional {
+	condition = groupeSelected;
+}
+
+Conditional16: WOConditional {
+	condition = urlPdfSelected;
+	negate = true;
+}
+
+Conditional18: WOConditional {
+	condition = listeDiplomeParDomaine.count;
+}
+
+Conditional19: WOConditional {
+	condition = listeDiplomeParGrade.count;
+}
+
+Conditional2: WOConditional {
+	condition = avecMention;
+}
+
+Conditional20: WOConditional {
+	condition = false;
+}
+
+Conditional21: WOConditional {
+	condition = urlPdfSelected;
+}
+
+Conditional22: WOConditional {
+	condition = urlPdfGrpSelected;
+	negate = true;
+}
+
+Conditional3: WOConditional {
+	condition = avecMention;
+	negate = true;
+}
+
+Conditional4: WOConditional {
+	condition = urlPdfGrpSelected;
+}
+
+Conditional5: WOConditional {
+	condition = showDiplomes;
+}
+
+Conditional6: WOConditional {
+	condition = showDiplomeAvecDomaine;
+}
+
+Conditional7: WOConditional {
+	condition = showDiplomeAvecGrade;
+}
+
+Conditional8: WOConditional {
+	condition = showParcours;
+}
+
+Conditional9: WOConditional {
+	condition = showParcours;
+}
+
+Form1: WOForm {
+	action = refresh;
+	name = "UE";
+	id = "UE";
+}
+
+GenericContainer2: WOGenericContainer {
+	color = fontColorSemaine;
+	elementName = "FONT";
+	size = fontSizeSemaine;
+}
+
+GenericContainer3: WOGenericContainer {
+	class = classItemDiplome;
+	elementName = "FONT";
+}
+
+GenericContainer4: WOGenericContainer {
+	class = classItemDiplome;
+	elementName = "FONT";
+}
+
+Hyperlink1: WOHyperlink {
+	action = selectionNoSemaine;
+}
+
+Hyperlink4: WOHyperlink {
+	action = afficheParcoursDiplomeSelectionne;
+	class = classItemDiplome;
+	fragmentIdentifier = aDomaine.fdomCode;//valid
+}
+
+Hyperlink5: WOHyperlink {
+	action = selectionSemestre;
+	class = classSemestreSelected;
+	title = "voir le planning corespondant";
+}
+
+Hyperlink6: WOHyperlink {
+	class = classSemestreSelected;
+	title = "voir le planning corespondant";
+	action = selectionSemestre;
+}
+
+Hyperlink7: WOHyperlink {
+	action = afficheParcoursDiplomeSelectionne;
+	class = classItemDiplome;
+	fragmentIdentifier = aGrade.fgraCode;//valid
+}
+
+IFrame1: WOIFrame {
+	frameborder = false;
+	height = "600";
+	longdesc = 0;
+	src = urlPdfSelected;
+	width = "800";
+}
+
+IFrame2: WOIFrame {
+	frameborder = "false";
+	height = 600;
+	longdesc = 0;
+	src = urlPdfGrpSelected;
+	width = 800;
+}
+
+PopUpButton2: WOPopUpButton {
+	displayString = itemGroupeObjet.scolGroupeGrp.ggrpLibelle;//valid
+	item = itemGroupeObjet;
+	list = semestreSelected.tosScolGroupeObjet;//valid
+	noSelectionString = "Diplome";
+	onChange = "javascript: document.forms.UE.submit();";
+	selection = groupeSelected;
+	escapeHTML = false;
+}
+
+Repetition10: WORepetition {
+	index = indexRepartSemestre;
+	item = aRepartSemestre;
+	list = listeRepartSemestre;
+}
+
+Repetition11: WORepetition {
+	index = indexRepartSemestre;
+	item = aRepartSemestre;
+	list = listeRepartSemestre;
+}
+
+Repetition2: WORepetition {
+	list = listeSemaine;
+	item = noSemaine;
+}
+
+Repetition4: WORepetition {
+	item = aDomaine;
+	list = listeDomaine;
+}
+
+Repetition5: WORepetition {
+	item = aDiplome;
+	list = listeDiplomeParDomaine;
+}
+
+Repetition6: WORepetition {
+	item = aDiplome;
+	list = listeDiplomeParGrade;
+}
+
+Repetition7: WORepetition {
+	item = aGrade;
+	list = listeGrade;
+}
+
+Repetition8: WORepetition {
+	item = aParcours;
+	list = listeParcours;
+}
+
+Repetition9: WORepetition {
+	item = aParcours;
+	list = listeParcours;
+}
+
+String1: WOString {
+	value = aDiplome.fdipLibelle;//valid
+}
+
+String13: WOString {
+	value = noSemaine;
+}
+
+String16: WOString {
+	value = aDiplome.fdipSpecialite;//valid
+}
+
+String17: WOString {
+	value = aDomaine.fdomLibelle;//valid
+}
+
+String18: WOString {
+	value = nameGradeSelected;
+}
+
+String19: WOString {
+	value = aDiplome.fdipSpecialite;//valid
+}
+
+String20: WOString {
+	value = aGrade.fgraLibelle;//valid
+}
+
+String21: WOString {
+	value = nameDomaineSelected;
+}
+
+String22: WOString {
+	value = aParcours.mparLibelle;//valid
+}
+
+String23: WOString {
+	escapeHTML = false;
+	value = baliseDomaineAnchor;
+}
+
+String24: WOString {
+	value = aParcours.mparLibelle;//valid
+}
+
+String25: WOString {
+	escapeHTML = false;
+	value = baliseGradeAnchor;
+}
+
+String26: WOString {
+	value = aDiplome.fdipMention;//valid
+}
+
+String27: WOString {
+	value = aDiplome.fdipAbreviation;//valid
+}
+
+String28: WOString {
+	value = aRepartSemestre.scolMaquetteSemestre.msemOrdre;//valid
+}
+
+String29: WOString {
+	value = aRepartSemestre.scolMaquetteSemestre.msemOrdre;//valid
+}
+
+String3: WOString {
+	value = noSemaineSelectionne;
+}
+
+String30: WOString {
+	escapeHTML = false;
+	value = titrePlanning;
+}
+
+String4: WOString {
+	value = aDiplome.fdipAbreviation;//valid
+}
+
+String5: WOString {
+	value = noSemaineSelectionne;
+}
+
+String6: WOString {
+	value = groupeSelected.scolGroupeGrp.ggrpLibelle;
+}

@@ -1,0 +1,287 @@
+EDTDefaultPage1: EDTDefaultPage {
+}
+
+AjoutResa1: AjoutResa {
+}
+
+ChoixDate1: ChoixDate {
+	dateDebut = dateDebut;
+	heureDebut = heureDebut;
+	heureFin = heureFin;
+}
+
+Conditional1: WOConditional {
+	condition = showIdentification;
+}
+
+Conditional10: WOConditional {
+	condition = showReunion;
+}
+
+Conditional12: WOConditional {
+	condition = showExamen;
+}
+
+Conditional13: WOConditional {
+	condition = showExamen;
+}
+
+Conditional14: WOConditional {
+	condition = showIndividuPublic;
+}
+
+Conditional15: WOConditional {
+	condition = showIndividuPublic;
+}
+
+Conditional16: WOConditional {
+	condition = showDiplome;
+}
+
+Conditional17: WOConditional {
+	condition = showDiplome;
+}
+
+Conditional18: WOConditional {
+	condition = pageVide;
+}
+
+Conditional19: WOConditional {
+	condition = showIndividuChoix;
+}
+
+Conditional2: WOConditional {
+	condition = showIndividu;
+}
+
+Conditional20: WOConditional {
+	condition = showIndividuChoisi;
+}
+
+Conditional21: WOConditional {
+	condition = showIndividuChoisi;
+}
+
+Conditional25: WOConditional {
+	condition = addResa;
+}
+
+ConditionalAjoutResaObjet : WOConditional {
+	condition = conditionAjoutResaObjet;
+}
+
+Conditional29: WOConditional {
+	condition = addResa;
+}
+
+Conditional3: WOConditional {
+	condition = showObjet;
+}
+
+Conditional4: WOConditional {
+	condition = showObjet;
+}
+
+Conditional5: WOConditional {
+	condition = showIndividu;
+}
+
+Conditional6: WOConditional {
+	condition = showSalles;
+}
+
+Conditional7: WOConditional {
+	condition = showSalles;
+}
+
+Conditional9: WOConditional {
+	condition = showReunion;
+}
+
+EDTDiplome1: EDTDiplome {
+}
+
+EDTExamen1: EDTExamen {
+}
+
+EDTExamenMenu1: EDTExamenMenu {
+}
+
+EDTIndividu1: EDTIndividu {
+	dateDebut = dateDebut;
+	heureDebut = heureDebut;
+	heureFin = heureFin;
+}
+
+EDTIndividuChoisi1: EDTIndividuChoisi {
+	dateDebut = dateDebut;
+	heureDebut = heureDebut;
+	heureFin = heureFin;
+}
+
+EDTIndividuChoix1: EDTIndividuChoix {
+}
+
+EDTIndividuInfo1: EDTIndividuInfo {
+}
+
+EDTIndividuInfoPublic1: EDTIndividuInfoPublic {
+}
+
+EDTIndividuPublic1: EDTIndividuPublic {
+}
+
+EDTLogin1: EDTLogin {
+}
+
+EDTObjetMenu1: EDTObjetMenu {
+}
+
+EDTObjetPlanning1: EDTObjetPlanning {
+	dateDebut = dateDebut;
+	heureDebut = heureDebut;
+	heureFin = heureFin;
+}
+
+EDTReunion1: EDTReunion {
+}
+
+EDTReunionMenu1: EDTReunionMenu {
+}
+
+EDTSalleMenu1: EDTSalleMenu {
+}
+
+EDTSallePlanning1: EDTSallePlanning {
+	dateDebut = dateDebut;
+	heureDebut = heureDebut;
+	heureFin = heureFin;
+}
+
+GenericContainer1: WOGenericContainer {
+	border = 0;
+	cellpadding = 0;
+	cellspacing = 0;
+	elementName = "TABLE";
+	height = "100%";
+	width = "100%";
+}
+
+GenericContainer2: WOGenericContainer {
+	//background = application.menuBackgroundImage;
+	elementName = "TD";
+	width = 196;
+	align = "LEFT";
+	valign = "TOP";
+	rowspan = 2;
+	style = "border-right: 1px solid #bbbbff";
+}
+
+GenericContainer3: WOGenericContainer {
+	border = 0;
+	cellpadding = 0;
+	cellspacing = 0;
+	elementName = "TABLE";
+	height = "90%";
+	width = "100%";
+}
+
+HebdomadaireConditional: WOKeyValueConditional{
+    key = "selection";
+    value = "Hebdomadaire";
+}
+
+Hyperlink3: WOHyperlink {
+	action = session.goToMainSite;
+	class = "linkMenu";
+	title = "Accueil du site de l'universit&eacute;";
+}
+
+Hyperlink8: WOHyperlink {
+	class = "menuItem";
+	href = directActionIcal;
+	title = "Cliquer ici pour avoir votre agenda public au format iCAL";
+}
+
+Hyperlink9: WOHyperlink {
+	href = application.urlEdtScol;
+	style = "font-weight: bold; font-family: Arial, Verdana, Microsoft Sans Serif, MS Sans Serif, Helvetica, sans-serif; font-size: 12px;color: #FF8C00;";
+	title = "R&eacute;server une salle par SuperPlan" ;
+	target = "_blank";
+}
+
+Image1: WOImage {
+	border = 0;
+	filename = "page_vide.jpg";
+	framework = "app";
+	height = 540;
+	width = 781;
+}
+
+Image3: WOImage {
+	border = 0;
+	src = application.srcLogoULR;
+}
+
+Image4: WOImage {
+	border = 0;
+	filename = "info.gif";
+	framework = "app";
+	height = 13;
+	width = 13;
+}
+
+MensuelleCalendrierConditional: WOKeyValueConditional{
+    key = "selection";
+    value = "Mensuelle Calendrier";
+}
+
+MensuelleTexteConditional: WOKeyValueConditional{
+    key = "selection";
+    value = "Mensuelle Texte";
+}
+
+QuotidienneConditional: WOKeyValueConditional{
+    key = "selection";
+    value = "Quotidienne";
+}
+
+SwitchComponent1: WOSwitchComponent {
+	WOComponentName = planning;
+	dateDebut = dateDebut;
+	heureDebut = heureDebut;
+	heureFin = heureFin;
+}
+
+TabPanel1: WOTabPanel {
+ 	tabs = keyList;
+	submitActionName = whereGo;
+    selectedTab = selection;
+}
+
+TabPanel2: WOTabPanel {
+ 	tabs = keyList;
+    selectedTab = selection;
+	submitActionName = whereGo;
+}
+
+TabPanel3: WOTabPanel {
+ 	tabs = keyList;
+    selectedTab = selection;
+	submitActionName = whereGo;
+}
+TabPanel4: WOTabPanel {
+ 	tabs = keyList;
+    selectedTab = selection;
+	submitActionName = whereGo;
+}
+TabPanel5: WOTabPanel {
+ 	tabs = keyList;
+    selectedTab = selection;
+	submitActionName = whereGo;
+}
+TableauDeBordConditional: WOKeyValueConditional{
+    key = "selection";
+    value = "Tableau De Bord";
+}
+

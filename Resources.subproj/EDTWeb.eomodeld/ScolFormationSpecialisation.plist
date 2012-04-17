@@ -1,0 +1,69 @@
+{
+    attributes = (
+        {
+            columnName = FDIP_CODE; 
+            externalType = VARCHAR2; 
+            name = fdipCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 7; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = FSPN_ABREVIATION; 
+            externalType = VARCHAR2; 
+            name = fspnAbreviation; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            columnName = FSPN_KEY; 
+            externalType = NUMBER; 
+            name = fspnKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = FSPN_LIBELLE; 
+            externalType = VARCHAR2; 
+            name = fspnLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 200; 
+        }
+    ); 
+    attributesUsedForLocking = (fdipCode, fspnAbreviation, fspnKey, fspnLibelle); 
+    className = EOGenericRecord; 
+    classProperties = (
+        fdipCode, 
+        fspnAbreviation, 
+        fspnKey, 
+        fspnLibelle, 
+        scolFormationDiplome, 
+        scolFormationHabilitations
+    ); 
+    externalName = SCOLARITE.SCOL_FORMATION_SPECIALISATION; 
+    fetchSpecificationDictionary = {}; 
+    name = ScolFormationSpecialisation; 
+    primaryKeyAttributes = (fspnKey); 
+    relationships = (
+        {
+            destination = ScolFormationDiplome; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = fdipCode; sourceAttribute = fdipCode; }); 
+            name = scolFormationDiplome; 
+        }, 
+        {
+            destination = ScolFormationHabilitation; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = fspnKey; sourceAttribute = fspnKey; }); 
+            name = scolFormationHabilitations; 
+        }
+    ); 
+}

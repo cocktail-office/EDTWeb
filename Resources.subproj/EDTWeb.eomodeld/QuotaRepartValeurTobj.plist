@@ -1,0 +1,44 @@
+{
+    attributes = (
+        {
+            columnName = PTY_KEY; 
+            externalType = NUMBER; 
+            name = ptyKey; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = RVT_COUT_CREDIT; 
+            externalType = NUMBER; 
+            name = rvtCoutCredit; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = TYPE_CODE; 
+            externalType = VARCHAR2; 
+            name = typeCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 30; 
+        }, 
+        {
+            columnName = VTY_KEY; 
+            externalType = NUMBER; 
+            name = vtyKey; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }
+    ); 
+    attributesUsedForLocking = (ptyKey, rvtCoutCredit, typeCode, vtyKey); 
+    className = EOGenericRecord; 
+    classProperties = (ptyKey, rvtCoutCredit, typeCode, vtyKey); 
+    externalName = GRHUM.QUOTA_REPART_VALEUR_TOBJ; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        _clientClassPropertyNames = (ptyKey, rvtCoutCredit, typeCode, vtyKey); 
+        _nameInObjectStore = QUOTA_REPART_VALEUR_TOBJ; 
+    }; 
+    name = QuotaRepartValeurTobj; 
+    primaryKeyAttributes = (typeCode); 
+}

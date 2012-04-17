@@ -1,0 +1,175 @@
+CRIHTMLFooter1: CRIHTMLFooter {
+	showBar = true;
+	useDefaultMail = true;
+}
+
+CRINavigationBar1: CRINavigationBar {
+	displayGroup = periodiciteDisplayGroup;
+	longListLimit = 10;
+	textMode = false;
+}
+
+Conditional1: WOConditional {
+	condition = showPlanning;
+}
+
+Conditional2: WOConditional {
+	condition = periodiciteDisplayGroup.displayedObjects.count;
+}
+
+Conditional3: WOConditional {
+	condition = periodiciteDisplayGroup.displayedObjects.count;
+	negate = true;
+}
+
+Conditional4: WOConditional {
+	condition = afficheSuite;
+}
+
+Form1: WOForm {
+	action = selectAnnee;
+	multipleSubmit = true;
+	name = "annee";
+	id = "annee";
+}
+
+GenericContainer2: WOGenericContainer {
+	color = fontColorSemaine;
+	elementName = "FONT";
+	size = fontSizeSemaine;
+}
+
+Hyperlink1: WOHyperlink {
+	action = selectionNoSemaine;
+}
+
+Hyperlink2: WOHyperlink {
+	href = mailto;
+	title = titleMailto;
+}
+
+Hyperlink3: WOHyperlink {
+	action = voirTousLesParticipants;
+}
+
+Image1: WOImage {
+	border = 0;
+	height = "5";
+	src = application.srcLigneJauneULR;
+	width = "70%";
+}
+
+PopUpButton1: WOPopUpButton {
+	item = uneAnnee;
+	list = listeAnnee;
+	onChange = "javasscript:document.forms.annee.submit()";
+	selection = anneeSelectionne;
+}
+
+Repetition1: WORepetition {
+	item = aPeriodicite;
+	list = periodiciteDisplayGroup.displayedObjects;
+}
+
+Repetition2: WORepetition {
+	count = 52;
+	index = noSemaine;
+}
+
+Repetition3: WORepetition {
+	item = participant;
+	list = listeParticipant;
+}
+
+String1: WOString {
+	dateformat = "%d/%m/%y";
+	value = dateDebut;
+}
+
+String10: WOString {
+	value = anneeSelectionne;
+}
+
+String11: WOString {
+	value = premierJourSemaineSelectionne.noSemaine;
+}
+
+String12: WOString {
+	value = anneeSelectionne;
+}
+
+String13: WOString {
+	value = noSemaine;
+}
+
+String14: WOString {
+	escapeHTML = false;
+	value = batimentSelectionne;
+}
+
+String15: WOString {
+	escapeHTML = false;
+	value = batimentSelectionne;
+}
+
+String2: WOString {
+	dateformat = "%H:%M";
+	value = dateDebut;
+}
+
+String3: WOString {
+	dateformat = "%H:%M";
+	value = dateFin;
+}
+
+String4: WOString {
+	value = aPeriodicite.reservation.resaCommentaire;
+}
+
+String5: WOString {
+	value = participant.nomEtPrenom;
+}
+
+String6: WOString {
+	value = aPeriodicite.reservation.tosResaSalles.@min.toSalles.batNom;//valid
+	escapeHTML = false;
+}
+
+String7: WOString {
+	escapeHTML = false;
+	value = aPeriodicite.reservation.tosResaSalles.@min.toSalles.etage;//valid
+}
+
+String8: WOString {
+	value = aPeriodicite.reservation.tosResaSalles.@min.toSalles.salPorte;//valid
+	escapeHTML = false;
+}
+
+String9: WOString {
+	value = premierJourSemaineSelectionne.noSemaine;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = selectAnnee;
+	class = "bouton";
+	value = "S&eacute;lectionner";
+	escapeHTML = false;
+}
+
+TriDisplayGroup1: TriDisplayGroup {
+	actif = triSalle;
+	displayGroup = periodiciteDisplayGroup;
+	sortKey = "reservation.tosResaSalles.@min.toSalles.salPorte";
+}
+
+TriDisplayGroup2: TriDisplayGroup {
+	actif = triJour;
+	displayGroup = periodiciteDisplayGroup;
+	sortKeys = sortClassique;
+}
+
+TriDisplayGroup3: TriDisplayGroup {
+	actif = triObjet;
+	displayGroup = periodiciteDisplayGroup;
+	sortKey = "reservation.resaCommentaire";
+}

@@ -1,0 +1,74 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = FFIL_ABREVIATION; 
+            externalType = VARCHAR2; 
+            name = fgraAbreviation; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 20; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = FFIL_LIBELLE; 
+            externalType = VARCHAR2; 
+            internalInfo = {_nameInObjectStore = FFIL_CODE; }; 
+            name = fgraCodage; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            columnName = FFIL_CODE; 
+            externalType = VARCHAR2; 
+            internalInfo = {_nameInObjectStore = FFIL_CODE; }; 
+            name = fgraCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            columnName = FFIL_LIBELLE; 
+            externalType = VARCHAR2; 
+            internalInfo = {_nameInObjectStore = FFIL_LIBELLE; }; 
+            name = fgraLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            columnName = FFIL_VALIDITE; 
+            externalType = VARCHAR2; 
+            name = fgraValidite; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }
+    ); 
+    attributesUsedForLocking = (fgraAbreviation, fgraCodage, fgraCode, fgraLibelle, fgraValidite); 
+    className = EOGenericRecord; 
+    classProperties = (
+        fgraAbreviation, 
+        fgraCodage, 
+        fgraCode, 
+        fgraLibelle, 
+        fgraValidite, 
+        scolFormationDiplomes
+    ); 
+    externalName = SCOLARITE.SCOL_FORMATION_FILIERE; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {_nameInObjectStore = SCOL_FORMATION_FILIERE; }; 
+    name = ScolFormationFiliere; 
+    primaryKeyAttributes = (fgraCode); 
+    relationships = (
+        {
+            deleteRule = EODeleteRuleNoAction; 
+            destination = ScolFormationDiplome; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = fgraCode; sourceAttribute = fgraCode; }); 
+            name = scolFormationDiplomes; 
+        }
+    ); 
+}

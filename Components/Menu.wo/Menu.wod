@@ -1,0 +1,9 @@
+ComponentContent1: WOComponentContent {
+}
+
+WebMenu: CRIMenu {
+	listener = listener;
+	itemSet = menuItemSet;
+	useTopMenu = true;
+	keepLastSelection = true;
+}

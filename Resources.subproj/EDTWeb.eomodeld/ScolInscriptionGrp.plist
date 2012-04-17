@@ -1,0 +1,56 @@
+{
+    attributes = (
+        {
+            columnName = FANN_KEY; 
+            externalType = NUMBER; 
+            name = fannKey; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = GGRP_KEY; 
+            externalType = NUMBER; 
+            name = ggrpKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = IDIPL_NUMERO; 
+            externalType = NUMBER; 
+            name = idiplNumero; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = IGGRP_TEMOIN_SELECTION; 
+            externalType = VARCHAR2; 
+            name = iggrpTemoinSelection; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }
+    ); 
+    attributesUsedForLocking = (fannKey, ggrpKey, idiplNumero, iggrpTemoinSelection); 
+    className = EOGenericRecord; 
+    classProperties = (fannKey, iggrpTemoinSelection, scolGroupeGrp, ggrpKey, idiplNumero); 
+    externalName = SCOLARITE.SCOL_INSCRIPTION_GRP; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        _clientClassPropertyNames = (fannKey, iggrpTemoinSelection, scolGroupeGrp, ggrpKey, idiplNumero); 
+    }; 
+    name = ScolInscriptionGrp; 
+    primaryKeyAttributes = (ggrpKey, idiplNumero); 
+    relationships = (
+        {
+            destination = ScolGroupeGrp; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = ggrpKey; sourceAttribute = ggrpKey; }); 
+            name = scolGroupeGrp; 
+        }
+    ); 
+}

@@ -1,0 +1,93 @@
+{
+    attributes = (
+        {
+            columnName = C_IMPLANTATION; 
+            externalType = VARCHAR2; 
+            name = cImplantation; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 2; 
+        }, 
+        {
+            columnName = D_CREATION; 
+            externalType = DATE; 
+            name = dCreation; 
+            valueClassName = NSCalendarDate; 
+            valueType = D; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = D_DEB_VAL; 
+            externalType = DATE; 
+            name = dDebVal; 
+            valueClassName = NSCalendarDate; 
+            valueType = D; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = D_FIN_VAL; 
+            externalType = DATE; 
+            name = dFinVal; 
+            valueClassName = NSCalendarDate; 
+            valueType = D; 
+        }, 
+        {
+            columnName = D_MODIFICATION; 
+            externalType = DATE; 
+            name = dModification; 
+            valueClassName = NSCalendarDate; 
+            valueType = D; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = LC_IMPLANTATION_GEO; 
+            externalType = VARCHAR2; 
+            name = lcImplantationGeo; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 20; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = LL_IMPLANTATION_GEO; 
+            externalType = VARCHAR2; 
+            name = llImplantationGeo; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 40; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        cImplantation, 
+        dCreation, 
+        dDebVal, 
+        dFinVal, 
+        dModification, 
+        lcImplantationGeo, 
+        llImplantationGeo
+    ); 
+    className = EOGenericRecord; 
+    classProperties = (
+        dCreation, 
+        dDebVal, 
+        dFinVal, 
+        dModification, 
+        lcImplantationGeo, 
+        llImplantationGeo
+    ); 
+    externalName = GRHUM.IMPLANTATION_GEO; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        _clientClassPropertyNames = (
+            dCreation, 
+            dDebVal, 
+            dFinVal, 
+            dModification, 
+            lcImplantationGeo, 
+            llImplantationGeo
+        ); 
+        _javaClientClassName = EOGenericRecord; 
+    }; 
+    name = ImplantationGeo; 
+    primaryKeyAttributes = (cImplantation); 
+}

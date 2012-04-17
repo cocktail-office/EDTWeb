@@ -1,0 +1,107 @@
+Conditional1: WOConditional {
+	condition = boo;
+}
+
+GenericContainer1: WOGenericContainer {
+	bgcolor = application.coulTFonce;
+	border = 0;
+	cellpadding = 2;
+	cellspacing = 1;
+	elementName = "TABLE";
+	height = 20;
+	width = 700;
+}
+
+GenericContainer2: WOGenericContainer {
+	align = "CENTER";
+	bgcolor = application.coulFonce;
+	elementName = "TD";
+}
+
+GenericContainer3: WOGenericContainer {
+	align = "CENTER";
+	bgcolor = application.coulFonce;
+	elementName = "TD";
+}
+
+GenericContainer4: WOGenericContainer {
+	bgcolor = application.coulTFonce;
+	border = 0;
+	cellpadding = 2;
+	cellspacing = 1;
+	elementName = "TABLE";
+	width = 700;
+}
+
+Hyperlink1: WOHyperlink {
+	href = voirResa;
+}
+
+Hyperlink2: WOHyperlink {
+	href = voirResaMemePage;
+}
+
+Hyperlink6: WOHyperlink {
+	action = goPrec;
+	title = "Mois precedent";
+}
+
+Hyperlink7: WOHyperlink {
+	action = goSuiv;
+	title = "Mois suivant";
+}
+
+Image1: WOImage {
+	filename = "img/nav_prev.gif";
+	framework = "CRIWebExt3";
+	border = 0;
+}
+
+Image2: WOImage {
+	filename = "img/nav_next.gif";
+	framework = "CRIWebExt3";
+	border = 0;
+}
+
+Image3: WOImage {
+	src = application.srcLigneJauneULR;
+	height = 2;
+	width = "100%";
+}
+
+Repetition1: WORepetition {
+	item = unJour;
+	list = liste;
+}
+
+Repetition2: WORepetition {
+	item = ele;
+	list = liste2;
+}
+
+String1: WOString {
+	value = unJour.nomDuJour;
+}
+
+String2: WOString {
+	value = unJour.numJour;
+}
+
+String3: WOString {
+	value = unJour.nomDuMois;
+	escapeHTML = false;
+}
+
+String4: WOString {
+	value = ele;
+	escapeHTML = false;
+}
+
+String5: WOString {
+	value = dateDuJour.nomDuMois;
+	escapeHTML = false;
+}
+
+String6: WOString {
+	value = dateDuJour.annee;
+}

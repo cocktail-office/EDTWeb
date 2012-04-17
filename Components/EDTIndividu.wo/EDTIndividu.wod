@@ -1,0 +1,40 @@
+Conditional1: WOConditional {
+	condition = showPlanning;
+}
+
+Conditional2: WOConditional {
+	condition = showPlanning;
+	negate = true;
+}
+
+Conditional3: WOConditional {
+	condition = addButtonMiseAJour;
+}
+
+EnregistrementOccupationIndividu1: EnregistrementOccupationIndividu {
+}
+
+Form1: WOForm {
+	name = "formDateDebut";
+	multipleSubmit = true;
+	id = "formDateDebut";
+}
+
+Image1: WOImage {
+	src = application.srcLigneJauneULR;
+	height = 2;
+	width = "100%";
+}
+
+SubmitButton2: WOSubmitButton {
+	action = refresh;
+	value = "mettre a jour";
+	class = "bouton";
+}
+
+SwitchComponent1: WOSwitchComponent {
+	WOComponentName = planning;
+	dateDebut = dateDebut;
+	heureDebut = heureDebut;
+	heureFin = heureFin;
+}

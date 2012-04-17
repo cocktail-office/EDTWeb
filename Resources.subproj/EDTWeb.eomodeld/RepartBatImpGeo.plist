@@ -1,0 +1,65 @@
+{
+    attributes = (
+        {
+            columnName = C_IMPLANTATION; 
+            externalType = VARCHAR2; 
+            name = cImplantation; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 2; 
+        }, 
+        {
+            columnName = C_LOCAL; 
+            externalType = VARCHAR2; 
+            name = cLocal; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = D_CREATION; 
+            externalType = DATE; 
+            name = dCreation; 
+            valueClassName = NSCalendarDate; 
+            valueType = D; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = D_MODIFICATION; 
+            externalType = DATE; 
+            name = dModification; 
+            valueClassName = NSCalendarDate; 
+            valueType = D; 
+        }
+    ); 
+    attributesUsedForLocking = (cImplantation, cLocal, dCreation, dModification); 
+    className = EOGenericRecord; 
+    classProperties = (dCreation, dModification, implantationGeo, batiment); 
+    externalName = GRHUM.REPART_BAT_IMP_GEO; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        _clientClassPropertyNames = (dCreation, dModification, implantationGeo, batiment); 
+        _javaClientClassName = EOGenericRecord; 
+    }; 
+    name = RepartBatImpGeo; 
+    primaryKeyAttributes = (cLocal, cImplantation); 
+    relationships = (
+        {
+            destination = Batiment; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = batCode; sourceAttribute = cLocal; }); 
+            name = batiment; 
+        }, 
+        {
+            destination = ImplantationGeo; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cImplantation; sourceAttribute = cImplantation; }); 
+            name = implantationGeo; 
+        }
+    ); 
+}

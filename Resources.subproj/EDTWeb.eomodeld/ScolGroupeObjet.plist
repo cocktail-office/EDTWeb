@@ -1,0 +1,74 @@
+{
+    attributes = (
+        {
+            columnName = "FANN_KEY"; 
+            externalType = NUMBER; 
+            name = fannKey; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = "GGRP_KEY"; 
+            externalType = NUMBER; 
+            name = ggrpKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = "GOBJ_KEY"; 
+            externalType = NUMBER; 
+            name = gobjKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = "GOBJ_TYPE"; 
+            externalType = VARCHAR2; 
+            name = gobjType; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MAP_KEY"; 
+            externalType = NUMBER; 
+            name = mapKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MSEM_KEY"; 
+            externalType = NUMBER; 
+            name = msemKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }
+    ); 
+    attributesUsedForLocking = (fannKey, ggrpKey, gobjKey, gobjType, mapKey, msemKey); 
+    className = "org.cocktail.edtweb.server.metier.ScolGroupeObjet"; 
+    classProperties = (fannKey, gobjType, mapKey, msemKey, scolGroupeGrp); 
+    externalName = "SCOLARITE.SCOL_GROUPE_OBJET"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (fannKey, gobjType, mapKey, msemKey, scolGroupeGrp); 
+    }; 
+    name = ScolGroupeObjet; 
+    primaryKeyAttributes = (gobjKey); 
+    relationships = (
+        {
+            destination = ScolGroupeGrp; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = ggrpKey; sourceAttribute = ggrpKey; }); 
+            name = scolGroupeGrp; 
+        }
+    ); 
+}

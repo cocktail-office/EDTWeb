@@ -1,0 +1,100 @@
+{
+    attributes = (
+        {
+            columnName = FANN_KEY; 
+            externalType = NUMBER; 
+            name = fannKey; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = FDOM_CODE; 
+            externalType = VARCHAR2; 
+            name = fdomCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            columnName = MUE_CODE; 
+            externalType = VARCHAR2; 
+            name = mueCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 15; 
+        }, 
+        {
+            columnName = MUE_HORAIRE_ETU; 
+            externalType = NUMBER; 
+            name = mueHoraireEtu; 
+            precision = 5; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            columnName = MUE_KEY; 
+            externalType = NUMBER; 
+            name = mueKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = MUE_LIBELLE; 
+            externalType = VARCHAR2; 
+            name = mueLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            columnName = MUE_POINTS; 
+            externalType = NUMBER; 
+            name = muePoints; 
+            precision = 2; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }
+    ); 
+    attributesUsedForLocking = (fannKey, fdomCode, mueCode, mueHoraireEtu, mueKey, mueLibelle, muePoints); 
+    className = EOGenericRecord; 
+    classProperties = (
+        fannKey, 
+        fdomCode, 
+        mueCode, 
+        mueHoraireEtu, 
+        mueKey, 
+        mueLibelle, 
+        muePoints, 
+        scolMaquetteRepartitionUes
+    ); 
+    externalName = SCOLARITE.SCOL_MAQUETTE_UE; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        _clientClassPropertyNames = (
+            fannKey, 
+            fdomCode, 
+            mueCode, 
+            mueHoraireEtu, 
+            mueKey, 
+            mueLibelle, 
+            muePoints, 
+            scolMaquetteRepartitionUes
+        ); 
+        _nameInObjectStore = SCOL_MAQUETTE_UE; 
+    }; 
+    name = ScolMaquetteUe; 
+    primaryKeyAttributes = (mueKey); 
+    relationships = (
+        {
+            destination = ScolMaquetteRepartitionUe; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = mueKey; sourceAttribute = mueKey; }); 
+            name = scolMaquetteRepartitionUes; 
+        }
+    ); 
+}

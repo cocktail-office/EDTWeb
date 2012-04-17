@@ -1,0 +1,68 @@
+GenericContainer1: WOGenericContainer {
+	bgcolor = application.coulTFonce;
+	border = 0;
+	cellpadding = 2;
+	cellspacing = 1;
+	elementName = "TABLE";
+	width = 700;
+}
+
+GenericContainer2: WOGenericContainer {
+	align = "CENTER";
+	bgcolor = application.coulFonce;
+	colspan = 2;
+	elementName = "TD";
+}
+
+GenericContainer3: WOGenericContainer {
+	bgcolor = application.coulFonce;
+	elementName = "TR";
+}
+
+GenericContainer4: WOGenericContainer {
+	bgcolor = application.coulClair;
+	colspan = 2;
+	elementName = "TD";
+}
+
+Hyperlink1: WOHyperlink {
+	action = goPrev;
+	title = "Mois precedent";
+}
+
+Hyperlink2: WOHyperlink {
+	action = goNext;
+	title = "Mois suivant";
+}
+
+Image1: WOImage {
+	filename = "img/nav_next.gif";
+	framework = "CRIWebExt3";
+	border = 0;
+}
+
+Image2: WOImage {
+	filename = "img/nav_prev.gif";
+	framework = "CRIWebExt3";
+	border = 0;
+}
+
+Image3: WOImage {
+	src = application.srcLigneJauneULR;
+	height = 2;
+	width = "100%";
+}
+
+Repetition1: WORepetition {
+	item = ele;
+	list = liste;
+}
+
+String1: WOString {
+	value = ele;
+	escapeHTML = false;
+}
+
+String2: WOString {
+	value = liste.count;
+}

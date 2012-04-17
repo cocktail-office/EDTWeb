@@ -1,0 +1,78 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = GGRP_KEY; 
+            externalType = NUMBER; 
+            internalInfo = {_nameInObjectStore = GOBJ_KEY; }; 
+            name = ggrpKey; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = HCOMP_REC; 
+            externalType = NUMBER; 
+            name = hcompRec; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = MAP_KEY; 
+            externalType = NUMBER; 
+            name = mapKey; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            definition = scolMaquetteAp.mapLibelle; 
+            externalType = VARCHAR2; 
+            name = mapLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 200; 
+        }, 
+        {
+            columnName = RESA_AP_KEY; 
+            externalType = NUMBER; 
+            name = resaApKey; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = RESA_KEY; 
+            externalType = NUMBER; 
+            name = resaKey; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (ggrpKey, hcompRec, mapKey, mapLibelle, resaApKey, resaKey); 
+    className = EOGenericRecord; 
+    classProperties = (ggrpKey, hcompRec, mapKey, mapLibelle, scolMaquetteAp, scolGroupeGrp); 
+    externalName = EDTSCOL.RESERVATION_AP; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        _clientClassPropertyNames = (ggrpKey, hcompRec, mapKey, mapLibelle, scolMaquetteAp, scolGroupeGrp); 
+    }; 
+    name = ReservationAp; 
+    primaryKeyAttributes = (resaApKey); 
+    relationships = (
+        {
+            deleteRule = EODeleteRuleNoAction; 
+            destination = ScolGroupeGrp; 
+            internalInfo = {_nameInObjectStore = scolGroupeObjet; uniqueID = 201012272; }; 
+            isToMany = N; 
+            joinSemantic = EOLeftOuterJoin; 
+            joins = ({destinationAttribute = ggrpKey; sourceAttribute = ggrpKey; }); 
+            name = scolGroupeGrp; 
+        }, 
+        {
+            destination = ScolMaquetteAp; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = mapKey; sourceAttribute = mapKey; }); 
+            name = scolMaquetteAp; 
+        }
+    ); 
+}

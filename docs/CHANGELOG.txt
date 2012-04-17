@@ -1,0 +1,16 @@
+EdtWeb
+Changements de la v1.3.1.13 (31/01/2008) à la v1.3.2 (20/05/2008)
+
+Corrections :
+- (DT-Cocktail #683/#771/#773) La recherche d'un edt de diplôme pouvait ne pas fonctionner, mélange de pinceaux entre année scolaire / année universitaire... corrigé...
+- La recherche d'un EDT de diplôme de groupe ne renvoyait que le premier edt trouvé sur le diplome, et non le groupe... corrigé...
+
+Améliorations / Ajouts :
+- (DT-Cocktail #543) EDT d'un étudiant disponible en flux ics (par DirectAction) et pour le serveur de planning, à partir du login étudiant
+- (DT-Cocktail #682) Un graphique sur la page d'accueil au lieu d'une page blanche, indiquant d'utiliser les menus en haut...
+- (DT-Cocktail #808) Ajout d'un libellé devant la combo Box qui permet de choisir les diplomes et les groupes : "Filtre par diplomes ou groupes"
+- (DT-Cocktail #808) Correction du bug : Quand on selectionne un groupe TD1 d'un diplome X pour une semaine, affichage du pdf du goupe TD1 du diplome X, je choisi un autre diplome qui n'a pas d'edt exporté et j'ai un message qui me dit que le groupe TD1 n'a pas de planning exporté (je n'ai pas choisi de groupe pour ce nouveau diplome).
+- (DT-Cocktail #808) Les tentatives de modification/suppression de résas non simples (ne concernant pas seulement l'individu) sont interdites et avec un message d'erreur plus explicite...
+
+Changements :
+- La DirectAction pour l'agenda d'un individu ne récupérait que les réservations de type Réunion, maintenant on les récupère toutes.

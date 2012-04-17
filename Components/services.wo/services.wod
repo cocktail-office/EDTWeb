@@ -1,0 +1,16 @@
+Conditional1: WOConditional {
+	condition = application.useExamens;
+}
+
+Hyperlink6: WOHyperlink {
+	href = application.appUrl;
+}
+
+Image1: WOImage {
+	filename = "img/small-mail.gif";
+	framework = "CRIWebExt3";
+}
+
+String1: WOString {
+	value = application.name;
+}

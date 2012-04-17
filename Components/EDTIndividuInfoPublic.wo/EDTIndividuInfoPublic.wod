@@ -1,0 +1,55 @@
+Conditional1: WOConditional {
+	condition = false;
+}
+
+Conditional2: WOConditional {
+	condition = telephone.length;
+}
+
+Conditional3: WOConditional {
+	condition = mobile.length;
+}
+
+Conditional4: WOConditional {
+	condition = email.length;
+}
+
+Hyperlink1: WOHyperlink {
+	href = mailto;
+}
+
+Image4: WOImage {
+	border = 0;
+	data = photoIndividu;
+	mimeType = "image/gif";
+	height = 88;
+
+}
+
+String1: WOString {
+	value = email;
+}
+
+String2: WOString {
+	value = userFonction;
+}
+
+String3: WOString {
+	value = telephone;
+}
+
+String4: WOString {
+	value = mobile;
+}
+
+String5: WOString {
+	value = user.adrPrenom;
+}
+
+String7: WOString {
+	value = user.adrNom;
+}
+
+String8: WOString {
+	value = user.adrCivilite;
+}

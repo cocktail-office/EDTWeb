@@ -1,0 +1,170 @@
+Conditional3: WOConditional {
+	condition = afficherObjet;
+}
+
+Conditional4: WOConditional {
+	condition = itemObjet;
+}
+
+GenericContainer1: WOGenericContainer {
+	border = 0;
+	cellpadding = 0;
+	cellspacing = 0;
+	elementName = "TABLE";
+	height = "29px";
+	style = "BORDER-BOTTOM:DOTTED;BORDER-BOTTOM-WIDTH:1px;BORDER-COLOR:#2a4dff";
+	width = "100%";
+}
+
+GenericContainer2: WOGenericContainer {
+	align = "CENTER";
+	bgcolor = "#ffffff";
+	elementName = "TD";
+	onmouseOut = "javascript: document.onmousemove = null; document.onclick = null;";
+	onmouseOver = "javascript: setOffset(488); document.onmousemove = get_mouse; document.onclick = change_textfield";
+	style = "cursor:crosshair";
+	valign = "TOP";
+	width = 620;
+}
+
+GenericContainer3: WOGenericContainer {
+	bgcolor = application.coulTFonce;
+	border = 0;
+	cellpadding = 1;
+	cellspacing = 1;
+	elementName = "TABLE";
+	width = 700;
+}
+
+GenericContainer4: WOGenericContainer {
+	bgcolor = application.coulFonce;
+	elementName = "TR";
+}
+
+GenericContainer5: WOGenericContainer {
+	bgcolor = application.coulFonce;
+	elementName = "TR";
+}
+
+GenericContainer6: WOGenericContainer {
+	bgcolor = application.coulClair;
+	elementName = "TR";
+}
+
+Hyperlink1: WOHyperlink {
+	action = nextDay;
+}
+
+Hyperlink2: WOHyperlink {
+	action = prevDay;
+}
+
+Hyperlink3: WOHyperlink {
+	action = goJPlusUn;
+	class = "linkPage";
+}
+
+Hyperlink4: WOHyperlink {
+	action = goJPlusDeux;
+	class = "linkPage";
+}
+
+Hyperlink5: WOHyperlink {
+	action = goJMoinsUn;
+	class = "linkPage";
+}
+
+Hyperlink6: WOHyperlink {
+	action = goJMoinsDeux;
+	class = "linkPage";
+}
+
+Image1: WOImage {
+	border = 0;
+	filename = "img/nav_next.gif";
+	framework = "CRIWebExt3";
+}
+
+Image2: WOImage {
+	border = 0;
+	filename = "img/nav_prev.gif";
+	framework = "CRIWebExt3";
+}
+
+Image3: WOImage {
+	src = application.srcLigneJauneULR;
+	height = 2;
+	width = "100%";
+}
+
+JavaScript1: WOJavaScript {
+	scriptSource = "getMouse.js";
+	type="text/javascript";
+}
+
+MyDiv1: MyDiv {
+	bgColor = responder.couleurTR;
+	contenuBalise = affichgeContenu;
+	height = height;
+	id = itemObjet.key.toString;
+	left = "301px";
+	top = top;
+	width = "615px";
+	classOver = "t100";
+	zIndex = "1";
+	classInit = "t50";
+	visibility = "visible";
+	border = "1px none #0000ff";
+	positionAbsolute = true;
+	zIndexOver = "2";
+	onClick = voirInfo;
+}
+
+Repetition1: WORepetition {
+	item = itemObjet;
+	list = listeObjet;
+}
+
+Repetition2: WORepetition {
+	count = nbHeure;
+	index = index;
+}
+
+String1: WOString {
+	value = affichageItem;
+	numberformat = "_0";
+}
+
+String2: WOString {
+	dateformat = "%A %d";
+	value = nsJour;
+}
+
+String3: WOString {
+	dateformat = "%B %Y";
+	value = nsJour;
+}
+
+String4: WOString {
+	dateformat = "%A %d";
+	value = jourPlusUn;
+}
+
+String5: WOString {
+	dateformat = "%A %d";
+	value = jourPlusDeux;
+}
+
+String6: WOString {
+	dateformat = "%A %d";
+	value = jourMoinsDeux;
+}
+
+String7: WOString {
+	dateformat = "%A %d";
+	value = jourMoinsUn;
+}
+
+String8: WOString {
+	value = noSemaine;
+}

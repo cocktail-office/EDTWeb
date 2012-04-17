@@ -1,0 +1,262 @@
+Conditional1: WOConditional {
+	condition = true;
+}
+
+Conditional10: WOConditional {
+	condition = addButtonResaGraphic;
+	negate = true;
+}
+
+Conditional2: WOConditional {
+	condition = false;
+}
+
+Conditional3: WOConditional {
+	condition = indexJour;
+	negate = true;
+}
+
+Conditional4: WOConditional {
+	condition = typeObjet;
+}
+
+Conditional5: WOConditional {
+	condition = indexHeure;
+	negate = true;
+}
+
+Conditional6: WOConditional {
+	condition = selectionOk;
+}
+
+Conditional7: WOConditional {
+	condition = false;
+}
+
+Conditional8: WOConditional {
+	condition = simpleConsultation;
+}
+
+Conditional9: WOConditional {
+	condition = ^titrePlanning;
+	negate = true;
+}
+
+Form1: WOForm {
+	action = refresh;
+	multipleSubmit = true;
+	name = nomForm;
+}
+
+Form2: WOForm {
+	multipleSubmit = true;
+}
+
+Form3: WOForm {
+	multipleSubmit = true;
+}
+
+GenericContainer1: WOGenericContainer {
+	align = "CENTER";
+	colspan = colspan;
+	elementName = "TD";
+}
+
+GenericContainer2: WOGenericContainer {
+	align = "LEFT";
+	bgcolor = couleurTR;
+	elementName = "TD";
+	height = 50;
+	onClick = onClick;
+	valign = "TOP";
+	width = 150;
+	style = "";
+}
+
+GenericContainer3: WOGenericContainer {
+	align = "CENTER";
+	colspan = colspan;
+	elementName = "TD";
+	valign = "CENTER";
+}
+
+GenericContainer4: WOGenericContainer {
+	align = "CENTER";
+	bgcolor = couleurSelection;
+	elementName = "TD";
+}
+
+GenericContainer5: WOGenericContainer {
+	bgcolor = application.coulTFonce;
+	border = 0;
+	cellpadding = 2;
+	cellspacing = 1;
+	elementName = "TABLE";
+}
+
+GenericContainer6: WOGenericContainer {
+	bgcolor = application.coulFonce;
+	elementName = "TR";
+}
+
+GenericContainer7: WOGenericContainer {
+	bgcolor = application.coulFonce;
+	elementName = "TR";
+}
+
+GenericContainer8: WOGenericContainer {
+	bgcolor = application.coulClair;
+	elementName = "TR";
+}
+
+HiddenField1: WOHiddenField {
+	name = "jour";
+	value = selectedJour;
+}
+
+HiddenField2: WOHiddenField {
+	name = "heure";
+	value = selectedHeure;
+}
+
+Hyperlink1: WOHyperlink {
+	action = next;
+	title = "Semaine Suivante";
+}
+
+Hyperlink2: WOHyperlink {
+	action = prev;
+	title = "Semaine Pr&eacute;c&eacute;dente";
+}
+
+Hyperlink3: WOHyperlink {
+	action = nextMonth;
+}
+
+Hyperlink4: WOHyperlink {
+	action = prevMonth;
+}
+
+Hyperlink6: WOHyperlink {
+	action = goPlanningJour;
+}
+
+Hyperlink7: WOHyperlink {
+	title = titleLienModifTailleTableau;
+	action = modifTailleTableau;
+}
+
+Image1: WOImage {
+	border = 0;
+	filename = "next2.gif";
+	framework = "app";
+	title = "Mois Suivant";
+}
+
+Image2: WOImage {
+	border = 0;
+	filename = "prev2.gif";
+	framework = "app";
+	title = "Mois Pr&eacute;c&eacute;dent";
+}
+
+Image3: WOImage {
+	border = 0;
+	filename = "img/nav_next.gif";
+	framework = "CRIWebExt3";
+}
+
+Image4: WOImage {
+	filename = "img/nav_prev.gif";
+	framework = "CRIWebExt3";
+	border = 0;
+}
+
+Image5: WOImage {
+	border = 0;
+	onMouseOver = onMouseOverImage;
+	name = "developpe";
+	onMouseOut = onMouseOutImage;
+	src = imageDeveloppement;
+}
+
+JavaScript1: WOJavaScript {
+	scriptSource = "https://apps.univ-lr.fr/jscript/overlib_mini.js";
+	type="text/javascript";
+}
+
+Repetition1: WORepetition {
+	item = uneHeure;
+	list = aJour.heuresDuJour;
+	index = indexHeure;
+}
+
+Repetition2: WORepetition {
+	item = aJour;
+	list = semaineSelected.allDays;
+	index = indexJour;
+}
+
+Repetition3: WORepetition {
+	item = uneHeure;
+	list = dateDuJour.heuresDuJour;
+}
+
+String1: WOString {
+	value = dateDuJour.noSemaine;
+}
+
+String2: WOString {
+	escapeHTML = false;
+	value = uneHeure.toString;
+}
+
+String3: WOString {
+	value = nbObjet;
+	escapeHTML = false;
+}
+
+String4: WOString {
+	dateformat = "%Y";
+	value = semaineSelected.jeudi.toNSTimestamp;
+}
+
+String5: WOString {
+	value = aJour;
+	escapeHTML = false;
+}
+
+String6: WOString {
+	value = jourDebut.toStringComplet;
+}
+
+String7: WOString {
+	value = jourFin.toStringComplet;
+}
+
+String8: WOString {
+	value = typeObjet;
+}
+
+String9: WOString {
+	value = ^titrePlanning;
+	escapeHTML = false;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = resetSelection;
+	value = "Reset";
+	class = "bouton";
+}
+
+SubmitButton2: WOSubmitButton {
+	action = retourPlanning;
+	class = "bouton";
+	value = "Ok";
+}
+
+SubmitButton3: WOSubmitButton {
+	action = modeSelection;
+	class = "bouton";
+	value = "Ajouter une reservation graphiquement";
+}

@@ -1,0 +1,68 @@
+{
+    attributes = (
+        {
+            columnName = FANN_KEY; 
+            externalType = NUMBER; 
+            name = fannKey; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = FHAB_KEY; 
+            externalType = NUMBER; 
+            name = fhabKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = FHAB_NIVEAU; 
+            externalType = NUMBER; 
+            name = fhabNiveau; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = FHAB_OUVERT; 
+            externalType = VARCHAR2; 
+            name = fhabOuvert; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            columnName = FSPN_KEY; 
+            externalType = NUMBER; 
+            name = fspnKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }
+    ); 
+    attributesUsedForLocking = (fannKey, fhabKey, fhabNiveau, fhabOuvert, fspnKey); 
+    className = EOGenericRecord; 
+    classProperties = (
+        fannKey, 
+        fhabKey, 
+        fhabNiveau, 
+        fhabOuvert, 
+        fspnKey, 
+        scolFormationSpecialisation
+    ); 
+    externalName = SCOLARITE.SCOL_FORMATION_HABILITATION; 
+    fetchSpecificationDictionary = {}; 
+    name = ScolFormationHabilitation; 
+    primaryKeyAttributes = (fhabKey); 
+    relationships = (
+        {
+            destination = ScolFormationSpecialisation; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = fspnKey; sourceAttribute = fspnKey; }); 
+            name = scolFormationSpecialisation; 
+        }
+    ); 
+}

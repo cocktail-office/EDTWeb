@@ -1,0 +1,56 @@
+{
+    attributes = (
+        {
+            columnName = GCOL_DATE_DEBUT; 
+            externalType = NUMBER; 
+            name = gcolDateDebut; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = GCOL_DATE_FIN; 
+            externalType = NUMBER; 
+            name = gcolDateFin; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = GCOL_KEY; 
+            externalType = NUMBER; 
+            name = gcolKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = GCOL_LIBELLE; 
+            externalType = VARCHAR2; 
+            name = gcolLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }
+    ); 
+    attributesUsedForLocking = (gcolDateDebut, gcolDateFin, gcolKey, gcolLibelle); 
+    className = EOGenericRecord; 
+    classProperties = (gcolDateDebut, gcolDateFin, gcolLibelle, scolGroupeGrps); 
+    externalName = SCOLARITE.SCOL_GROUPE_COLLECTION; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        _clientClassPropertyNames = (gcolDateDebut, gcolDateFin, gcolLibelle, scolGroupeGrps); 
+    }; 
+    name = ScolGroupeCollection; 
+    primaryKeyAttributes = (gcolKey); 
+    relationships = (
+        {
+            destination = ScolGroupeGrp; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = gcolKey; sourceAttribute = gcolKey; }); 
+            name = scolGroupeGrps; 
+        }
+    ); 
+}

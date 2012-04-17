@@ -1,0 +1,10 @@
+Hyperlink1: WOHyperlink {
+	action = tri;
+	title = title;
+}
+
+Image1: WOImage {
+	border = 0;
+	filename = nomIcon;
+	framework = frameworks;
+}

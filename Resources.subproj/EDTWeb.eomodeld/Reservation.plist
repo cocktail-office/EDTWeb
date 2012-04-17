@@ -1,0 +1,155 @@
+{
+    attributes = (
+        {
+            columnName = "D_CREATION"; 
+            externalType = DATE; 
+            name = dCreation; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = "D_MODIFICATION"; 
+            externalType = DATE; 
+            name = dModification; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = "NO_INDIVIDU_CLIENT"; 
+            externalType = NUMBER; 
+            name = noIndividuClient; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "RESA_COMMENTAIRE"; 
+            externalType = VARCHAR2; 
+            name = resaCommentaire; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 255; 
+        }, 
+        {
+            columnName = "RESA_KEY"; 
+            externalType = NUMBER; 
+            name = resaKey; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = resaKeyReadOnly; 
+            definition = "to_number(resaKey)"; 
+            isReadOnly = Y; 
+            name = resaKeyReadOnly; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "TLOC_CODE"; 
+            externalType = VARCHAR2; 
+            name = tlocCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        dCreation, 
+        dModification, 
+        noIndividuClient, 
+        resaCommentaire, 
+        resaKey, 
+        resaKeyReadOnly
+    ); 
+    className = "org.cocktail.edtweb.server.metier.Reservation"; 
+    classProperties = (
+        dCreation, 
+        dModification, 
+        individuUlr, 
+        noIndividuClient, 
+        periodicites, 
+        resaCommentaire, 
+        resaKeyReadOnly, 
+        reservationObjets, 
+        tlocCode, 
+        tosOccupant, 
+        tosResaExam, 
+        tosResaSalles, 
+        tosReservationAp
+    ); 
+    externalName = "EDTSCOL.RESERVATION"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (
+            dCreation, 
+            dModification, 
+            noIndividuClient, 
+            periodicites, 
+            resaCommentaire, 
+            resaKey, 
+            tlocCode, 
+            tosOccupant, 
+            tosResaExam, 
+            tosResaSalles, 
+            tosReservationAp
+        ); 
+    }; 
+    name = Reservation; 
+    primaryKeyAttributes = (resaKey); 
+    relationships = (
+        {
+            destination = IndividuUlr; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = noIndividu; sourceAttribute = noIndividuClient; }); 
+            name = individuUlr; 
+        }, 
+        {
+            destination = Periodicite; 
+            isToMany = Y; 
+            joinSemantic = EOLeftOuterJoin; 
+            joins = ({destinationAttribute = resaKey; sourceAttribute = resaKey; }); 
+            name = periodicites; 
+        }, 
+        {
+            destination = ReservationObjet; 
+            isToMany = Y; 
+            joinSemantic = EOLeftOuterJoin; 
+            joins = ({destinationAttribute = resaKey; sourceAttribute = resaKey; }); 
+            name = reservationObjets; 
+        }, 
+        {
+            destination = Occupant; 
+            isToMany = Y; 
+            joinSemantic = EOLeftOuterJoin; 
+            joins = ({destinationAttribute = resaKey; sourceAttribute = resaKey; }); 
+            name = tosOccupant; 
+        }, 
+        {
+            destination = ResaExamen; 
+            isToMany = Y; 
+            joinSemantic = EOLeftOuterJoin; 
+            joins = ({destinationAttribute = resaKey; sourceAttribute = resaKey; }); 
+            name = tosResaExam; 
+        }, 
+        {
+            destination = ResaSalles; 
+            internalInfo = {"_nameInObjectStore" = resaSalless; }; 
+            isToMany = Y; 
+            joinSemantic = EOLeftOuterJoin; 
+            joins = ({destinationAttribute = resaKey; sourceAttribute = resaKey; }); 
+            name = tosResaSalles; 
+        }, 
+        {
+            destination = ReservationAp; 
+            internalInfo = {"_nameInObjectStore" = reservationAps; }; 
+            isToMany = Y; 
+            joinSemantic = EOLeftOuterJoin; 
+            joins = ({destinationAttribute = resaKey; sourceAttribute = resaKey; }); 
+            name = tosReservationAp; 
+        }
+    ); 
+}

@@ -1,0 +1,73 @@
+{
+    attributes = (
+        {
+            columnName = "DATE_DEB"; 
+            externalType = DATE; 
+            name = dateDeb; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = "DATE_FIN"; 
+            externalType = DATE; 
+            name = dateFin; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = HCOMP; 
+            externalType = NUMBER; 
+            name = hcomp; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "PER_KEY"; 
+            externalType = NUMBER; 
+            name = perKey; 
+            valueClassName = NSNumber; 
+            valueType = f; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = perKeyReadOnly; 
+            definition = "to_number(perKey)"; 
+            isReadOnly = Y; 
+            name = perKeyReadOnly; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "RESA_KEY"; 
+            externalType = NUMBER; 
+            name = resaKey; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (dateDeb, dateFin, hcomp, perKey, perKeyReadOnly, resaKey); 
+    className = "org.cocktail.edtweb.server.metier.Periodicite"; 
+    classProperties = (dateDeb, dateFin, hcomp, perKeyReadOnly, reservation, vReservationObjet); 
+    externalName = "EDTSCOL.PERIODICITE"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_clientClassPropertyNames" = (dateDeb, dateFin, perKey, resaKey); }; 
+    name = Periodicite; 
+    primaryKeyAttributes = (perKey); 
+    relationships = (
+        {
+            destination = Reservation; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = resaKey; sourceAttribute = resaKey; }); 
+            name = reservation; 
+        }, 
+        {
+            destination = VReservationObjet; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = resaKey; sourceAttribute = resaKey; }); 
+            name = vReservationObjet; 
+        }
+    ); 
+}

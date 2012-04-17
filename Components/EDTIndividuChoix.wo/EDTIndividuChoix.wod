@@ -1,0 +1,62 @@
+Browser1: WOBrowser {
+	displayString = itemIndividu.nomEtPrenom;
+	escapeHTML = false;
+	item = itemIndividu;
+	list = listeIndividu;
+	multiple = false;
+	selections = itemSelected;
+}
+
+Conditional1: WOConditional {
+	condition = showChoixEDT;
+}
+
+Conditional2: WOConditional {
+	condition = showRecherche;
+}
+
+Conditional3: WOConditional {
+	condition = showChoisIndividu;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = voirMonEDT;
+	class = "bouton";
+	value = "Voir mon emploi du temps";
+}
+
+SubmitButton2: WOSubmitButton {
+	action = voirRecherche;
+	class = "bouton";
+	value = "Voir un autre emploi du temps";
+}
+
+SubmitButton3: WOSubmitButton {
+	action = voirChoix;
+	class = "bouton";
+	value = "Rechercher";
+}
+
+SubmitButton4: WOSubmitButton {
+	action = voirEDTIndividu;
+	class = "bouton";
+	value = "Voir l'emploi du temps de la personne";
+}
+
+SubmitButton5: WOSubmitButton {
+	action = voirRecherche;
+	class = "bouton";
+	value = "Chercher une autre personne";
+}
+
+TextField1: WOTextField {
+	value = nom;
+}
+
+TextField2: WOTextField {
+	value = prenom;
+}

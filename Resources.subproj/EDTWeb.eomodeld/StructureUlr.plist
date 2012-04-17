@@ -1,0 +1,119 @@
+{
+    attributes = (
+        {
+            columnName = "C_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = cStructure; 
+            valueClassName = NSString; 
+            width = 10; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "C_STRUCTURE_PERE"; 
+            externalType = VARCHAR2; 
+            name = cStructurePere; 
+            valueClassName = NSString; 
+            width = 10; 
+        }, 
+        {
+            columnName = "C_TYPE_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = cTypeStructure; 
+            valueClassName = NSString; 
+            width = 2; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "GRP_ALIAS"; 
+            externalType = VARCHAR2; 
+            name = grpAlias; 
+            valueClassName = NSString; 
+            width = 40; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "GRP_RESPONSABLE"; 
+            externalType = NUMBER; 
+            name = grpResponsable; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LC_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = lcStructure; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 20; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LL_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = libelleLong; 
+            valueClassName = NSString; 
+            width = 120; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        cStructure, 
+        grpAlias, 
+        cStructurePere, 
+        libelleLong, 
+        lcStructure, 
+        cTypeStructure, 
+        grpResponsable
+    ); 
+    className = "org.cocktail.edtweb.server.metier.StructureUlr"; 
+    classProperties = (
+        cStructure, 
+        grpAlias, 
+        cStructurePere, 
+        libelleLong, 
+        lcStructure, 
+        fils, 
+        pere, 
+        cTypeStructure, 
+        responsable, 
+        secretariats
+    ); 
+    externalName = "GRHUM.STRUCTURE_ULR"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (responsable, secretariats); 
+        "_javaClientClassName" = "org.cocktail.edtweb.client.metier.StructureUlr"; 
+    }; 
+    name = StructureUlr; 
+    primaryKeyAttributes = (cStructure); 
+    relationships = (
+        {
+            destination = StructureUlr; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cStructurePere; sourceAttribute = cStructure; }); 
+            name = fils; 
+        }, 
+        {
+            destination = StructureUlr; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cStructure; sourceAttribute = cStructurePere; }); 
+            name = pere; 
+        }, 
+        {
+            destination = IndividuUlr; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = noIndividu; sourceAttribute = grpResponsable; }); 
+            name = responsable; 
+        }, 
+        {
+            destination = Secretariat; 
+            isToMany = Y; 
+            joinSemantic = EOLeftOuterJoin; 
+            joins = ({destinationAttribute = cStructure; sourceAttribute = cStructure; }); 
+            name = secretariats; 
+        }
+    ); 
+}

@@ -1,0 +1,75 @@
+{
+    attributes = (
+        {
+            columnName = "C_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = cStructure; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            columnName = "DATE_DEB"; 
+            externalType = DATE; 
+            name = dateDeb; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "DATE_FIN"; 
+            externalType = DATE; 
+            name = dateFin; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = "RO_KEY"; 
+            externalType = NUMBER; 
+            name = roKey; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "ROR_KEY"; 
+            externalType = NUMBER; 
+            name = rorKey; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (cStructure, dateDeb, dateFin, roKey, rorKey); 
+    className = "org.cocktail.edtweb.server.metier.ResaObjetReserve"; 
+    classProperties = (cStructure, dateDeb, dateFin, repartStructures, resaObjet, structureUlr); 
+    externalName = "EDTSCOL.RESA_OBJET_RESERVE"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_clientClassPropertyNames" = (repartStructures, structureUlr); }; 
+    name = ResaObjetReserve; 
+    primaryKeyAttributes = (rorKey); 
+    relationships = (
+        {
+            deleteRule = EODeleteRuleNoAction; 
+            destination = RepartStructure; 
+            isToMany = Y; 
+            joinSemantic = EOLeftOuterJoin; 
+            joins = ({destinationAttribute = cStructure; sourceAttribute = cStructure; }); 
+            name = repartStructures; 
+        }, 
+        {
+            destination = ResaObjet; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = roKey; sourceAttribute = roKey; }); 
+            name = resaObjet; 
+        }, 
+        {
+            deleteRule = EODeleteRuleNoAction; 
+            destination = StructureUlr; 
+            isToMany = N; 
+            joinSemantic = EOLeftOuterJoin; 
+            joins = ({destinationAttribute = cStructure; sourceAttribute = cStructure; }); 
+            name = structureUlr; 
+        }
+    ); 
+}

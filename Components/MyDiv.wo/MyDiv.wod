@@ -1,0 +1,16 @@
+GenericContainer1: WOGenericContainer {
+	class = classInit;
+	elementName = "DIV";
+	id = id;
+	onMouseOut = lOnMouseOut;
+	onMouseOver = lOnMouseOver;
+	style = style;
+	valign = "center";
+	align = "center";
+	onclick = ^onClick;
+}
+
+String1: WOString {
+	value = contenuBalise;
+	escapeHTML = false;
+}

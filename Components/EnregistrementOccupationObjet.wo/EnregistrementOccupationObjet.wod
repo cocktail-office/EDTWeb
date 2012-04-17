@@ -1,0 +1,233 @@
+Browser1: WOBrowser {
+	item = aUserInfo;
+	list = listeIndividu;
+	selections = individuSelectionne;
+	displayString = affichageIndividu;
+}
+
+CRIDatePicker1: CRIDatePicker {
+	dateValue = dateDebut;
+	fieldName = "dateDebut";
+	formName = "ajoutAgenda";
+}
+
+CRIDatePicker2: CRIDatePicker {
+	dateValue = dateFin;
+	fieldName = "dateFin";
+	formName = "ajoutAgenda";
+}
+
+CheckBox1: WOCheckBox {
+	checked = lundi;
+}
+
+CheckBox2: WOCheckBox {
+	checked = mardi;
+}
+
+CheckBox3: WOCheckBox {
+	checked = mercredi;
+}
+
+CheckBox4: WOCheckBox {
+	checked = jeudi;
+}
+
+CheckBox5: WOCheckBox {
+	checked = vendredi;
+}
+
+CheckBox6: WOCheckBox {
+	checked = samedi;
+}
+
+CheckBox7: WOCheckBox {
+	checked = dimanche;
+}
+
+Conditional1: WOConditional {
+	condition = selectionPlusieurJour;
+	negate = true;
+}
+
+Conditional10: WOConditional {
+	condition = false;
+}
+
+Conditional2: WOConditional {
+	condition = selectionPlusieurJour;
+}
+
+Conditional3: WOConditional {
+	condition = erreurEnregistrement;
+}
+
+Conditional4: WOConditional {
+	condition = pourLeCompteDe;
+	negate = true;
+}
+
+Conditional5: WOConditional {
+	condition = pourLeCompteDe;
+}
+
+Conditional6: WOConditional {
+	condition = rechercheindividu;
+	negate = true;
+}
+
+Conditional7: WOConditional {
+	condition = rechercheindividu;
+}
+
+Conditional8: WOConditional {
+	condition = individuSelectionne;
+	negate = true;
+}
+
+Conditional9: WOConditional {
+	condition = individuSelectionne;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+	name = "ajoutAgenda";
+	id = "ajoutAgenda";
+}
+
+Hyperlink1: WOHyperlink {
+	action = resaPourLeCompteDe;
+}
+
+PopUpButton1: WOPopUpButton {
+	list = listeDate;
+	selection = selectedYear;
+	item = aYear;
+	displayString = affichageYear;
+}
+
+RadioButton1: WORadioButton {
+	name = "Enregistrment";
+	selection = typeEnregistrment;
+	value = typePrive;
+}
+
+RadioButton2: WORadioButton {
+	name = "Enregistrment";
+	selection = typeEnregistrment;
+	value = typePublic;
+}
+
+String1: WOString {
+	escapeHTML = false;
+	value = erreurEnregistrement;
+}
+
+String2: WOString {
+	value = objet.roLibelle1; //VALID
+}
+
+String3: WOString {
+	value = session.connectedUserInfo.nomEtPrenom;
+}
+
+String4: WOString {
+	value = individuSelectionne.nomEtPrenom;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = annuler;
+	class = "bouton";
+	value = "Annuler";
+}
+
+SubmitButton2: WOSubmitButton {
+	action = faireReservation;
+	class = "bouton";
+	value = "Enregistrer";
+}
+
+SubmitButton3: WOSubmitButton {
+	action = rechercherIndividu;
+	class = "bouton";
+	value = "Rechercher";
+}
+
+SubmitButton4: WOSubmitButton {
+	action = choisirUtilisateur;
+	class = "bouton";
+	value = "Choisir";
+}
+
+SubmitButton6: WOSubmitButton {
+	action = annulerPourLeCompte;
+	class = "bouton";
+	value = "Annuler";
+}
+
+Text1: WOText {
+	cols = 30;
+	rows = 5;
+	value = objetResa;
+}
+
+TextField1: WOTextField {
+	size = 30;
+	value = listeSemaine;
+}
+
+TextField10: WOTextField {
+	value = nom;
+}
+
+TextField11: WOTextField {
+	value = prenom;
+}
+
+TextField2: WOTextField {
+	value = heureDebut;
+	align = "right";
+	size = 2;
+}
+
+TextField3: WOTextField {
+	value = minuteDebut;
+	align = "right";
+	size = 2;
+}
+
+TextField4: WOTextField {
+	value = heureFin;
+	align = "right";
+	size = 2;
+}
+
+TextField5: WOTextField {
+	value = minuteFin;
+	align = "right";
+	size = 2;
+}
+
+TextField6: WOTextField {
+	value = minuteFin;
+	align = "right";
+	size = 2;
+}
+
+TextField7: WOTextField {
+	value = heureFin;
+	align = "right";
+	size = 2;
+}
+
+TextField8: WOTextField {
+	value = minuteDebut;
+	align = "right";
+	size = 2;
+}
+
+TextField9: WOTextField {
+	value = heureDebut;
+	align = "right";
+	size = 2;
+}

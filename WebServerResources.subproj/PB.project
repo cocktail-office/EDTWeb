@@ -1,0 +1,46 @@
+
+{
+    DYNAMIC_CODE_GEN = YES;
+    English_RESOURCES = 
+    {};
+    FILESTABLE = 
+    {
+        CLASSES = 
+        ();
+        OTHER_LINKED = 
+        ();
+        OTHER_SOURCES = 
+        ();
+        SUBPROJECTS = 
+        ();
+        WEBSERVER_RESOURCES = 
+        (
+           dev_droite_b.gif, 
+           dev_droite_g.gif, 
+           dev_gauche_b.gif, 
+           dev_gauche_g.gif, 
+           getMouse.js, 
+           info.gif, 
+           next2.gif, 
+           parJour.gif, 
+           parJour_over.gif, 
+           parJour_selected.gif, 
+           parSemaine.gif, 
+           parSemaine_over.gif, 
+           parSemaine_selected.gif, 
+           prev2.gif
+        );
+        WOAPP_RESOURCES = 
+        ();
+        WO_COMPONENTS = 
+        ();
+    };
+    FRAMEWORKSEARCH = 
+    (
+       "$(NEXT_ROOT)$(LOCAL_LIBRARY_DIR)/Frameworks"
+    );
+    LANGUAGE = English;
+    PROJECTNAME = EDTWeb;
+    PROJECTTYPE = JavaWebObjectsSubproject;
+    PROJECTVERSION = 2.8;
+}

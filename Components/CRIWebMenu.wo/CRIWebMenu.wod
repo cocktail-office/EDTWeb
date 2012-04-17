@@ -1,0 +1,65 @@
+siMainSelectedNO: WOConditional {
+  condition = isMainItemSelected;
+  negate = true;
+}
+
+siMainSelectedYES: WOConditional {
+  condition = isMainItemSelected;
+}
+
+siSubSelectedNO: WOConditional {
+  condition = isSubItemSelected;
+  negate = true;
+}
+
+siSubSelectedYES: WOConditional {
+  condition = isSubItemSelected;
+}
+
+linkMainSelected: WOHyperlink {
+  action = selectMainMenuItem;
+  target = menuItem.target;
+  title = menuItem.tip;
+  class = "linkPage";
+}
+
+linkSubSelected: WOHyperlink {
+  action = selectSubMenuItem;
+  target = menuItem.target;
+  title = menuItem.tip;
+  class = "linkPage";
+}
+
+imgMainNotSelected: WOImage {
+  filename = "img/mitem-close.gif";
+  framework = "CRIWebExt3";
+  border = 0;
+  vspace = 3;
+}
+
+imgMainSelected: WOImage {
+  filename = "img/mitem-open.gif";
+  framework = "CRIWebExt3";
+  border = 0;
+  vspace = 3;
+}
+
+repetMainMenu: WORepetition {
+  item = menuItem;
+  list = mainMenuItems;
+}
+
+repetSubMenu: WORepetition {
+  item = menuItem;
+  list = subMenuItems;
+}
+
+strMainSelected: WOString {
+  value = menuItem.label;
+  escapeHTML = false;
+}
+
+strSubSelected: WOString {
+  value = menuItem.label;
+  escapeHTML = false;
+}

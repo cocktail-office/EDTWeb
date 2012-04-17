@@ -1,0 +1,24 @@
+{
+    "WebObjects Release" = "WebObjects 5.0"; 
+    encoding = "UTF-8"; 
+    variables = {
+        periodiciteDisplayGroup = {
+            class = WODisplayGroup; 
+            dataSource = {
+                class = EODatabaseDataSource; 
+                editingContext = "session.defaultEditingContext"; 
+                fetchSpecification = {
+                    class = EOFetchSpecification; 
+                    entityName = Periodicite; 
+                    fetchLimit = 0; 
+                    isDeep = YES; 
+                }; 
+            }; 
+            formatForLikeQualifier = "%@*"; 
+            localKeys = (); 
+            numberOfObjectsPerBatch = 10; 
+            selectsFirstObjectAfterFetch = YES; 
+            sortOrdering = ({class = EOSortOrdering; key = dateDeb; selectorName = "compareAscending:"; }); 
+        }; 
+    }; 
+}

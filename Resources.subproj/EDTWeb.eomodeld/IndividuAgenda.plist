@@ -1,0 +1,29 @@
+{
+    attributes = (
+        {
+            columnName = NO_INDIVIDU; 
+            externalType = NUMBER; 
+            name = noIndividu; 
+            precision = 8; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = IND_AGENDA; 
+            externalType = VARCHAR2; 
+            name = showAgendaPublic; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }
+    ); 
+    attributesUsedForLocking = (noIndividu, showAgendaPublic); 
+    className = EOGenericRecord; 
+    classProperties = (showAgendaPublic); 
+    externalName = GRHUM.INDIVIDU_ULR; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {_clientClassPropertyNames = (showAgendaPublic); }; 
+    name = IndividuAgenda; 
+    primaryKeyAttributes = (noIndividu); 
+}

@@ -1,0 +1,37 @@
+{
+    attributes = (
+        {
+            columnName = GGRP_KEY_1; 
+            externalType = NUMBER; 
+            name = ggrpKey1; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = GGRP_KEY_2; 
+            externalType = NUMBER; 
+            name = ggrpKey2; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (ggrpKey1, ggrpKey2); 
+    className = EOGenericRecord; 
+    classProperties = (ggrpKey1, ggrpKey2, scolGroupeInclusions); 
+    externalName = SCOLARITE.SCOL_GROUPE_INCLUSION; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {_clientClassPropertyNames = (ggrpKey1, ggrpKey2, scolGroupeInclusions); }; 
+    name = ScolGroupeInclusion; 
+    primaryKeyAttributes = (ggrpKey1, ggrpKey2); 
+    relationships = (
+        {
+            destination = ScolGroupeInclusion; 
+            isToMany = Y; 
+            joinSemantic = EOLeftOuterJoin; 
+            joins = ({destinationAttribute = ggrpKey2; sourceAttribute = ggrpKey1; }); 
+            name = scolGroupeInclusions; 
+        }
+    ); 
+}

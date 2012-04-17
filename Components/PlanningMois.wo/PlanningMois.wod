@@ -1,0 +1,133 @@
+GenericContainer1: WOGenericContainer {
+	align = "LEFT";
+	bgcolor = couleur;
+	elementName = "TD";
+	height = 100;
+	valign = "TOP";
+	width = 100;
+}
+
+GenericContainer2: WOGenericContainer {
+	bgcolor = application.coulTFonce;
+	border = 0;
+	cellpadding = 2;
+	cellspacing = 1;
+	elementName = "TABLE";
+	width = 700;
+}
+
+GenericContainer3: WOGenericContainer {
+	align = "CENTER";
+	bgcolor = application.coulFonce;
+	colspan = 2;
+	elementName = "TD";
+	height = 20;
+	width = 700;
+}
+
+GenericContainer4: WOGenericContainer {
+	bgcolor = application.coulTFonce;
+	border = 0;
+	cellpadding = 2;
+	cellspacing = 1;
+	elementName = "TABLE";
+	width = 700;
+}
+
+GenericContainer5: WOGenericContainer {
+	bgcolor = application.coulFonce;
+	elementName = "TH";
+}
+
+GenericContainer6: WOGenericContainer {
+	bgcolor = application.coulTFonce;
+	border = 0;
+	cellpadding = 2;
+	cellspacing = 1;
+	elementName = "TABLE";
+	width = 700;
+}
+
+GenericContainer7: WOGenericContainer {
+	bgcolor = application.coulClair;
+	elementName = "TR";
+}
+
+GenericContainer8: WOGenericContainer {
+	bgcolor = application.coulTFonce;
+	border = 0;
+	cellpadding = 2;
+	cellspacing = 1;
+	elementName = "TABLE";
+	width = 700;
+}
+
+Hyperlink1: WOHyperlink {
+	action = goJour;
+}
+
+Hyperlink4: WOHyperlink {
+	action = goMoisPrec;
+	title = "Mois precedent";
+}
+
+Hyperlink6: WOHyperlink {
+	action = goMoisSuiv;
+	title = "Mois suivant";
+}
+
+Image1: WOImage {
+	border = 0;
+	filename = "img/nav_prev.gif";
+	framework = "CRIWebExt3";
+}
+
+Image2: WOImage {
+	border = 0;
+	filename = "img/nav_next.gif";
+	framework = "CRIWebExt3";
+}
+
+Image3: WOImage {
+	src = application.srcLigneJauneULR;
+	height = 2;
+	width = "100%";
+}
+
+JavaScript1: WOJavaScript {
+	scriptSource = "http://www.univ-lr.fr/jscript/overlib_mini.js";
+	type="text/javascript";
+}
+
+Repetition1: WORepetition {
+	count = 7;
+	index = col;
+}
+
+Repetition2: WORepetition {
+	count = 6;
+	index = lig;
+}
+
+Repetition3: WORepetition {
+	item = ele;
+	list = liste2;
+}
+
+String1: WOString {
+	value = affiche;
+}
+
+String2: WOString {
+	value = ele;
+	escapeHTML = false;
+}
+
+String3: WOString {
+	value = dateJour.nomDuMois;
+	escapeHTML = false;
+}
+
+String4: WOString {
+	value = dateJour.annee;
+}

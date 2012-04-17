@@ -1,0 +1,90 @@
+{
+    attributes = (
+        {
+            columnName = "C_CIVILITE"; 
+            externalType = VARCHAR2; 
+            name = adrCivilite; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "NOM_USUEL"; 
+            externalType = VARCHAR2; 
+            name = adrNom; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 80; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = PRENOM; 
+            externalType = VARCHAR2; 
+            name = adrPrenom; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 60; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "IND_QUALITE"; 
+            externalType = VARCHAR2; 
+            name = adrQualite; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 120; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TEM_VALIDE"; 
+            externalType = VARCHAR2; 
+            name = adrValide; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            columnName = "NO_INDIVIDU"; 
+            externalType = NUMBER; 
+            name = noIndividu; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = "PERS_ID"; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }
+    ); 
+    attributesUsedForLocking = (adrCivilite, adrNom, adrPrenom, adrQualite, adrValide, noIndividu, persId); 
+    className = "org.cocktail.edtweb.server.metier.Adresse"; 
+    classProperties = (
+        adrCivilite, 
+        adrNom, 
+        adrPrenom, 
+        adrQualite, 
+        adrValide, 
+        noIndividu, 
+        persId, 
+        toPersonneTelephone
+    ); 
+    externalName = "GRHUM.INDIVIDU_ULR"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (adrCivilite, adrNom, adrPrenom, adrQualite, adrValide, persId); 
+    }; 
+    name = Adresse; 
+    primaryKeyAttributes = (noIndividu); 
+    relationships = (
+        {
+            destination = PersonneTelephone; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = persId; sourceAttribute = persId; }); 
+            name = toPersonneTelephone; 
+        }
+    ); 
+}

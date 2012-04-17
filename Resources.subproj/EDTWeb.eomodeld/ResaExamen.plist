@@ -1,0 +1,88 @@
+{
+    attributes = (
+        {
+            columnName = EENT_KEY; 
+            externalType = NUMBER; 
+            name = eentKey; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = EXAM_KEY; 
+            externalType = NUMBER; 
+            name = examKey; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = GGRP_KEY; 
+            externalType = NUMBER; 
+            internalInfo = {_nameInObjectStore = GOBJ_KEY; }; 
+            name = ggrpKey; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            definition = toScolExamenEntete.scolMaquetteEc.mecLibelle; 
+            externalType = VARCHAR2; 
+            name = libelleEC; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            columnName = RESA_KEY; 
+            externalType = NUMBER; 
+            name = resaKey; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }
+    ); 
+    attributesUsedForLocking = (eentKey, examKey, ggrpKey, libelleEC, resaKey); 
+    className = EOGenericRecord; 
+    classProperties = (
+        eentKey, 
+        examKey, 
+        ggrpKey, 
+        libelleEC, 
+        resaKey, 
+        toScolExamenEntete, 
+        scolGroupeGrp
+    ); 
+    externalName = EDTSCOL.RESA_EXAMEN; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        _clientClassPropertyNames = (
+            eentKey, 
+            examKey, 
+            ggrpKey, 
+            libelleEC, 
+            resaKey, 
+            toScolExamenEntete, 
+            scolGroupeGrp
+        ); 
+    }; 
+    name = ResaExamen; 
+    primaryKeyAttributes = (examKey); 
+    relationships = (
+        {
+            deleteRule = EODeleteRuleNoAction; 
+            destination = ScolGroupeGrp; 
+            internalInfo = {_nameInObjectStore = scolGroupeObjet; uniqueID = 201012272; }; 
+            isToMany = N; 
+            joinSemantic = EOLeftOuterJoin; 
+            joins = ({destinationAttribute = ggrpKey; sourceAttribute = ggrpKey; }); 
+            name = scolGroupeGrp; 
+        }, 
+        {
+            destination = ScolExamenEntete; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = eentKey; sourceAttribute = eentKey; }); 
+            name = toScolExamenEntete; 
+        }
+    ); 
+}

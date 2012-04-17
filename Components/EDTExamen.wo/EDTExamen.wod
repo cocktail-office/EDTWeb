@@ -1,0 +1,252 @@
+AffichePlanning1: AffichePlanning {
+	dateDebut = dateDebut;
+	enConsultation = true;
+	heureDebut = heureDebut;
+	heureFin = heureFin;
+	titrePlanning = "Planning des Examens";
+}
+
+Conditional1: WOConditional {
+	condition = showPlanning;
+}
+
+Conditional10: WOConditional {
+	condition = isLastSemestre;
+	negate = true;
+}
+
+Conditional11: WOConditional {
+	condition = parcoursHasSemestres;
+}
+
+Conditional12: WOConditional {
+	condition = parcoursHasSemestres;
+}
+
+Conditional13: WOConditional {
+	condition = isLastSemestre;
+	negate = true;
+}
+
+Conditional14: WOConditional {
+	condition = listeDiplomeParGrade.count;
+}
+
+Conditional15: WOConditional {
+	condition = false;
+}
+
+Conditional2: WOConditional {
+	condition = avecMention;
+}
+
+Conditional3: WOConditional {
+	condition = avecMention;
+	negate = true;
+}
+
+Conditional4: WOConditional {
+	condition = listeDiplomeParDomaine.count;
+}
+
+Conditional5: WOConditional {
+	condition = showDiplomes;
+}
+
+Conditional6: WOConditional {
+	condition = showDiplomeAvecDomaine;
+}
+
+Conditional7: WOConditional {
+	condition = showDiplomeAvecGrade;
+}
+
+Conditional8: WOConditional {
+	condition = showParcours;
+}
+
+Conditional9: WOConditional {
+	condition = showParcours;
+}
+
+Form1: WOForm {
+	action = refresh;
+	name = "UE";
+	id = "UE";
+}
+
+GenericContainer2: WOGenericContainer {
+	color = fontColorSemaine;
+	elementName = "FONT";
+	size = fontSizeSemaine;
+}
+
+GenericContainer3: WOGenericContainer {
+	class = classItemDiplome;
+	elementName = "FONT";
+}
+
+GenericContainer4: WOGenericContainer {
+	class = classItemDiplome;
+	elementName = "FONT";
+}
+
+Hyperlink1: WOHyperlink {
+	action = selectionNoSemaine;
+}
+
+Hyperlink4: WOHyperlink {
+	action = afficheParcoursDiplomeSelectionne;
+	class = classItemDiplome;
+	fragmentIdentifier = aDomaine.fdomCode;//valid
+}
+
+Hyperlink5: WOHyperlink {
+	action = selectionSemestre;
+	class = classSemestreSelected;
+	title = "voir le planning corespondant";
+}
+
+Hyperlink6: WOHyperlink {
+	class = classSemestreSelected;
+	title = "voir le planning corespondant";
+	action = selectionSemestre;
+}
+
+Hyperlink7: WOHyperlink {
+	action = afficheParcoursDiplomeSelectionne;
+	class = classItemDiplome;
+	fragmentIdentifier = aGrade.fgraCode;//valid
+}
+
+PopUpButton2: WOPopUpButton {
+	displayString = aRepartUe.scolMaquetteUe.mueLibelle;//valid
+	item = aRepartUe;
+	list = listeRepartUE;
+	noSelectionString = "Toutes les Ue";
+	onChange = "javascript: document.forms.UE.submit();";
+	selection = selectedUe;
+	escapeHTML = false;
+}
+
+Repetition10: WORepetition {
+	index = indexRepartSemestre;
+	item = aRepartSemestre;
+	list = listeRepartSemestre;
+}
+
+Repetition11: WORepetition {
+	index = indexRepartSemestre;
+	item = aRepartSemestre;
+	list = listeRepartSemestre;
+}
+
+Repetition2: WORepetition {
+	list = listeSemaine;
+	item = noSemaine;
+}
+
+Repetition4: WORepetition {
+	item = aDomaine;
+	list = listeDomaine;
+}
+
+Repetition5: WORepetition {
+	item = aDiplome;
+	list = listeDiplomeParDomaine;
+}
+
+Repetition6: WORepetition {
+	item = aDiplome;
+	list = listeDiplomeParGrade;
+}
+
+Repetition7: WORepetition {
+	item = aGrade;
+	list = listeGrade;
+}
+
+Repetition8: WORepetition {
+	item = aParcours;
+	list = listeParcours;
+}
+
+Repetition9: WORepetition {
+	item = aParcours;
+	list = listeParcours;
+}
+
+String1: WOString {
+	value = aDiplome.fdipLibelle;//valid
+}
+
+String13: WOString {
+	value = noSemaine;
+}
+
+String16: WOString {
+	value = aDiplome.fdipSpecialite;//valid
+}
+
+String17: WOString {
+	value = aDomaine.fdomLibelle;//valid
+}
+
+String18: WOString {
+	value = nameGradeSelected;
+}
+
+String19: WOString {
+	value = aDiplome.fdipSpecialite;//valid
+}
+
+String2: WOString {
+	value = aDiplome.fdipAbreviation;//valid
+}
+
+String20: WOString {
+	value = aGrade.fgraLibelle;//valid
+}
+
+String21: WOString {
+	value = nameDomaineSelected;
+}
+
+String22: WOString {
+	value = aParcours.mparLibelle;//valid
+}
+
+String23: WOString {
+	escapeHTML = false;
+	value = baliseDomaineAnchor;
+}
+
+String24: WOString {
+	value = aParcours.mparLibelle;//valid
+}
+
+String25: WOString {
+	escapeHTML = false;
+	value = baliseGradeAnchor;
+}
+
+String26: WOString {
+	value = aDiplome.fdipMention;//valid
+}
+
+String27: WOString {
+	value = aDiplome.fdipAbreviation;//valid
+}
+
+String28: WOString {
+	value = aRepartSemestre.scolMaquetteSemestre.msemOrdre;//valid
+}
+
+String29: WOString {
+	value = aRepartSemestre.scolMaquetteSemestre.msemOrdre;//valid
+}
+
+String30: WOString {
+	escapeHTML = false;
+	value = titrePlanning;
+}

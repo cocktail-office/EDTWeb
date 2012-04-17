@@ -1,0 +1,35 @@
+Conditional1: WOConditional {
+	condition = erreurEnregistrement;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+String1: WOString {
+	value = erreurEnregistrement;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = validerModification;
+	class = "bouton";
+	value = "Valider";
+}
+
+SubmitButton2: WOSubmitButton {
+	action = Annuler;
+	class = "bouton";
+	value = "Annuler";
+}
+
+Text1: WOText {
+	value = commentaire;
+}
+
+TextField1: WOTextField {
+	value = dateDebut;
+}
+
+TextField2: WOTextField {
+	value = dateFin;
+}

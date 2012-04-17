@@ -1,0 +1,48 @@
+{
+    attributes = (
+        {
+            columnName = "FANN_COURANTE"; 
+            externalType = VARCHAR2; 
+            name = fannCourante; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            columnName = "FANN_DEBUT"; 
+            externalType = NUMBER; 
+            name = fannDebut; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "FANN_FIN"; 
+            externalType = NUMBER; 
+            name = fannFin; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "FANN_KEY"; 
+            externalType = NUMBER; 
+            name = fannKey; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (fannCourante, fannDebut, fannFin, fannKey); 
+    className = "org.cocktail.edtweb.server.metier.ScolFormationAnnee"; 
+    classProperties = (fannCourante, fannDebut, fannFin, fannKey); 
+    externalName = "SCOLARITE.SCOL_FORMATION_ANNEE"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (fannCourante, fannDebut, fannFin, fannKey); 
+        "_javaClientClassName" = "org.cocktail.edtweb.server.client.ScolFormationAnnee"; 
+        "_nameInObjectStore" = "SCOL_FORMATION_ANNEE"; 
+    }; 
+    name = ScolFormationAnnee; 
+    primaryKeyAttributes = (fannKey); 
+}

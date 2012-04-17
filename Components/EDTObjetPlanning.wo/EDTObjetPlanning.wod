@@ -1,0 +1,54 @@
+AffichePlanning1: AffichePlanning {
+	dateDebut = dateDebut;
+	enConsultation = aPasDroitDeReserverObjet;
+	heureDebut = heureDebut;
+	heureFin = heureFin;
+}
+
+Conditional1: WOConditional {
+	condition = affichePlanning;
+}
+
+Conditional2: WOConditional {
+	condition = afficheToutLesDepositaires;
+	negate = true;
+}
+
+Conditional3: WOConditional {
+	condition = plusieurDestinataire;
+}
+
+Conditional4: WOConditional {
+	condition = showPlanning;
+}
+
+Conditional5: WOConditional {
+	condition = showPlanning;
+	negate = true;
+}
+
+Conditional6: WOConditional {
+	condition = resaObjet;
+	negate = true;
+}
+
+EnregistrementOccupationObjet1: EnregistrementOccupationObjet {
+}
+
+Hyperlink1: WOHyperlink {
+	action = afficherToutLesDestinataires;
+	title = "Afficher tout les d&eacute;positaires";
+}
+
+Repetition1: WORepetition {
+	item = aDepositaire;
+	list = listeDepositaireTrie;
+}
+
+String1: WOString {
+	value = resaObjet.roLibelle1;
+}
+
+String2: WOString {
+	value = affichageDepositaire;
+}

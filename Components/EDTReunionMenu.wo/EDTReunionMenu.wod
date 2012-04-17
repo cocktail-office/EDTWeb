@@ -1,0 +1,4 @@
+CRIWebMenu1: CRIWebMenu {
+	itemSet = menuItem;
+	listener = menuListener;
+}

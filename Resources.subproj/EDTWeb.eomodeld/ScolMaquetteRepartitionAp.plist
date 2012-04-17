@@ -1,0 +1,75 @@
+{
+    attributes = (
+        {
+            columnName = FANN_KEY; 
+            externalType = NUMBER; 
+            name = fannKey; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = MAP_KEY; 
+            externalType = NUMBER; 
+            name = mapKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = MEC_KEY; 
+            externalType = NUMBER; 
+            name = mecKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = MRAP_KEY; 
+            externalType = NUMBER; 
+            name = mrapKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = MRAP_MAJEUR; 
+            externalType = VARCHAR2; 
+            name = mrapMajeur; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = MRAP_SEMESTRE; 
+            externalType = NUMBER; 
+            name = mrapSemestre; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }
+    ); 
+    attributesUsedForLocking = (fannKey, mapKey, mecKey, mrapKey, mrapMajeur, mrapSemestre); 
+    className = EOGenericRecord; 
+    classProperties = (fannKey, mecKey, mrapMajeur, mrapSemestre, scolMaquetteAp, mapKey, mrapKey); 
+    externalName = SCOLARITE.SCOL_MAQUETTE_REPARTITION_AP; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        _clientClassPropertyNames = (fannKey, mecKey, mrapMajeur, mrapSemestre, scolMaquetteAp, mapKey, mrapKey); 
+        _nameInObjectStore = SCOL_MAQUETTE_REPARTITION_AP; 
+    }; 
+    name = ScolMaquetteRepartitionAp; 
+    primaryKeyAttributes = (mrapKey); 
+    relationships = (
+        {
+            destination = ScolMaquetteAp; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = mapKey; sourceAttribute = mapKey; }); 
+            name = scolMaquetteAp; 
+        }
+    ); 
+}

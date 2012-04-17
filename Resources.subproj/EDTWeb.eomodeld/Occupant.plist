@@ -1,0 +1,50 @@
+{
+    attributes = (
+        {
+            columnName = "HCOMP_REC"; 
+            externalType = NUMBER; 
+            name = hcompRec; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "NO_INDIVIDU"; 
+            externalType = NUMBER; 
+            name = noIndividu; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "OCC_KEY"; 
+            externalType = NUMBER; 
+            name = occKey; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "RESA_KEY"; 
+            externalType = NUMBER; 
+            name = resaKey; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (hcompRec, noIndividu, occKey, resaKey); 
+    className = "org.cocktail.edtweb.server.metier.Occupant"; 
+    classProperties = (hcompRec, noIndividu, reservation); 
+    externalName = "EDTSCOL.OCCUPANT"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_clientClassPropertyNames" = (hcompRec, noIndividu, resaKey); }; 
+    name = Occupant; 
+    primaryKeyAttributes = (occKey); 
+    relationships = (
+        {
+            destination = Reservation; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = resaKey; sourceAttribute = resaKey; }); 
+            name = reservation; 
+        }
+    ); 
+}

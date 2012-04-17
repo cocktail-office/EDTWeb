@@ -1,0 +1,149 @@
+CheckBox1: WOCheckBox {
+	checked = entiere;
+}
+
+CheckBox2: WOCheckBox {
+	checked = periode;
+}
+
+Conditional1: WOConditional {
+	condition = valide;
+}
+
+Conditional2: WOConditional {
+	condition = boo;
+}
+
+Conditional3: WOConditional {
+	condition = boo;
+	negate = true;
+}
+
+Conditional4: WOConditional {
+	condition = false;
+}
+
+Conditional5: WOConditional {
+	condition = afficheInstruct;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+Form2: WOForm {
+}
+
+GenericContainer1: WOGenericContainer {
+	bgcolor = application.coulTFonce;
+	border = 0;
+	cellpadding = 2;
+	cellspacing = 1;
+	elementName = "TABLE";
+	width = 196;
+}
+
+GenericContainer2: WOGenericContainer {
+	align = "CENTER";
+	bgcolor = application.coulFonce;
+	elementName = "TD";
+}
+
+GenericContainer3: WOGenericContainer {
+	align = "CENTER";
+	bgcolor = application.coulClair;
+	elementName = "TD";
+}
+
+GenericContainer4: WOGenericContainer {
+	elementName = "TD";
+	bgcolor = application.coulFonce;
+}
+
+GenericContainer5: WOGenericContainer {
+	bgcolor = application.coulClair;
+	elementName = "TD";
+}
+
+Hyperlink1: WOHyperlink {
+	action = showForm;
+}
+
+PopUpButton1: WOPopUpButton {
+	list = jourSem;
+	selection = jo;
+}
+
+PopUpButton10: WOPopUpButton {
+	list = annee;
+	selection = anf;
+}
+
+PopUpButton2: WOPopUpButton {
+	list = mois;
+	selection = mo;
+}
+
+PopUpButton3: WOPopUpButton {
+	list = annee;
+	selection = an;
+}
+
+PopUpButton4: WOPopUpButton {
+	list = heure;
+	selection = hd;
+}
+
+PopUpButton5: WOPopUpButton {
+	list = min;
+	selection = md;
+}
+
+PopUpButton6: WOPopUpButton {
+	list = heure;
+	selection = hf;
+}
+
+PopUpButton7: WOPopUpButton {
+	list = min;
+	selection = mf;
+}
+
+PopUpButton8: WOPopUpButton {
+	list = jourSem;
+	selection = jof;
+}
+
+PopUpButton9: WOPopUpButton {
+	list = mois;
+	selection = mof;
+}
+
+String1: WOString {
+	value = dateInvalide;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = voirGraphique;
+	value = "voir graphique";
+	class = "bouton";
+}
+
+SubmitButton2: WOSubmitButton {
+	action = annuler;
+	value = "Annuler";
+	class = "bouton";
+}
+
+SubmitButton3: WOSubmitButton {
+	action = modeSelection;
+	class = "bouton";
+	value = "Ajouter graphiquement";
+	escapeHTML = false;
+}
+
+SubmitButton5: WOSubmitButton {
+	action = ValiderForm;
+	class = "bouton";
+	value = "Continuer";
+}

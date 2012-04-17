@@ -1,0 +1,77 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "DATE_VALIDATION"; 
+            externalType = DATE; 
+            name = dateValidation; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "NO_INDIVIDU_VAL"; 
+            externalType = NUMBER; 
+            name = noIndividuVal; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "RESA_ETAT"; 
+            externalType = VARCHAR2; 
+            name = resaEtat; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            columnName = "RESA_KEY"; 
+            externalType = NUMBER; 
+            name = resaKey; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "RESA_OBJET_KEY"; 
+            externalType = NUMBER; 
+            name = resaObjetKey; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "RO_KEY"; 
+            externalType = NUMBER; 
+            name = roKey; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (dateValidation, noIndividuVal, resaEtat, resaKey, resaObjetKey, roKey); 
+    className = "org.cocktail.edtweb.server.metier.ReservationObjet"; 
+    classProperties = (dateValidation, noIndividuVal, resaEtat, resaObjet, reservation); 
+    externalName = "EDTSCOL.RESERVATION_OBJET"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_javaClientClassName" = "org.cocktail.edtweb.client.metier.ReservationObjet"; 
+    }; 
+    name = ReservationObjet; 
+    primaryKeyAttributes = (resaObjetKey); 
+    relationships = (
+        {
+            destination = ResaObjet; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = roKey; sourceAttribute = roKey; }); 
+            name = resaObjet; 
+        }, 
+        {
+            destination = Reservation; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = resaKey; sourceAttribute = resaKey; }); 
+            name = reservation; 
+        }
+    ); 
+}

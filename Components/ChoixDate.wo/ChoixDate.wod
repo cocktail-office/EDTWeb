@@ -1,0 +1,209 @@
+Conditional1: WOConditional {
+	condition = boo2;
+}
+
+Conditional2: WOConditional {
+	condition = boo4;
+	negate = true;
+}
+
+Conditional3: WOConditional {
+	condition = false;
+}
+
+Conditional4: WOConditional {
+	condition = false;
+}
+
+Form1: WOForm {
+}
+
+GenericContainer1: WOGenericContainer {
+	bgcolor = color;
+	elementName = "TD";
+	height = 16;
+	width = 28;
+}
+
+GenericContainer2: WOGenericContainer {
+	bgcolor = application.coulTFonce;
+	border = 0;
+	cellpadding = 2;
+	cellspacing = 1;
+	elementName = "TABLE";
+	width = 196;
+}
+
+GenericContainer3: WOGenericContainer {
+	bgcolor = application.coulFonce;
+	elementName = "TR";
+}
+
+GenericContainer4: WOGenericContainer {
+	bgcolor = application.coulClair;
+	elementName = "TR";
+}
+
+GenericContainer5: WOGenericContainer {
+	bgcolor = application.coulFonce;
+	elementName = "TR";
+}
+
+GenericContainer6: WOGenericContainer {
+	bgcolor = application.coulTFonce;
+	border = 0;
+	cellpadding = 1;
+	cellspacing = 1;
+	elementName = "TABLE";
+	width = 196;
+}
+
+GenericContainer7: WOGenericContainer {
+	bgcolor = application.coulClair;
+	elementName = "TR";
+}
+
+GenericContainer8: WOGenericContainer {
+	bgcolor = application.coulTFonce;
+	border = 0;
+	cellpadding = 1;
+	cellspacing = 1;
+	elementName = "TABLE";
+	width = 196;
+}
+
+GenericContainer9: WOGenericContainer {
+	bgcolor = application.coulTFonce;
+	border = 0;
+	cellpadding = 1;
+	cellspacing = 1;
+	elementName = "TABLE";
+	width = 196;
+}
+
+Hyperlink1: WOHyperlink {
+	action = selection;
+}
+
+Hyperlink10: WOHyperlink {
+	action = goCarnet;
+}
+
+Hyperlink2: WOHyperlink {
+	action = goMoisP;
+}
+
+Hyperlink3: WOHyperlink {
+	action = goAnneeP;
+}
+
+Hyperlink4: WOHyperlink {
+	action = goMoisS;
+}
+
+Hyperlink5: WOHyperlink {
+	action = goAnneeS;
+}
+
+Hyperlink6: WOHyperlink {
+	action = goJour;
+}
+
+Hyperlink7: WOHyperlink {
+	action = goSem;
+}
+
+Hyperlink8: WOHyperlink {
+	action = goMC;
+}
+
+Hyperlink9: WOHyperlink {
+	action = goMT;
+}
+
+Image1: WOImage {
+	framework = "CRIWebExt3";
+	border = 0;
+	title = "Mois precedent";
+	filename = "img/nav_prev.gif";
+}
+
+Image2: WOImage {
+	framework = "app";
+	border = 0;
+	title = "Annee precedente";
+	filename = "prev2.gif";
+}
+
+Image3: WOImage {
+	framework = "CRIWebExt3";
+	border = 0;
+	title = "Mois suivant";
+	filename = "img/nav_next.gif";
+}
+
+Image4: WOImage {
+	framework = "app";
+	border = 0;
+	title = "Annee suivante";
+	filename = "next2.gif";
+}
+
+Repetition1: WORepetition {
+	count = 6;
+	index = j;
+}
+
+Repetition2: WORepetition {
+	count = 7;
+	index = i;
+}
+
+String1: WOString {
+	value = dateDuJour.nomDuMois;
+	escapeHTML = false;
+}
+
+String2: WOString {
+	value = dateDuJour.annee;
+}
+
+String3: WOString {
+	value = ele;
+}
+
+String4: WOString {
+	value = nom;
+}
+
+String5: WOString {
+	value = jour;
+}
+
+String6: WOString {
+	value = mois;
+}
+
+String7: WOString {
+	value = annee;
+}
+
+SubmitButton2: WOSubmitButton {
+	action = affiche;
+	class = "bouton";
+	value = "OK";
+}
+
+TextField1: WOTextField {
+	value = heureDebut;
+	align = "right";
+	maxlength = 2;
+	size = 2;
+}
+
+TextField2: WOTextField {
+	value = heureFin;
+	align = "right";
+	maxlength = 2;
+	size = 2;
+}

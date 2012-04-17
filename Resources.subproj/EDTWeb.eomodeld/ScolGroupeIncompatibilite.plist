@@ -1,0 +1,45 @@
+{
+    attributes = (
+        {
+            columnName = GGRP_KEY_1; 
+            externalType = NUMBER; 
+            name = ggrpKey1; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = GGRP_KEY_2; 
+            externalType = NUMBER; 
+            name = ggrpKey2; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }
+    ); 
+    attributesUsedForLocking = (ggrpKey1, ggrpKey2); 
+    className = EOGenericRecord; 
+    classProperties = (scolGroupeGrp, scolGroupeGrp0); 
+    externalName = SCOLARITE.SCOL_GROUPE_INCOMPATIBILITE; 
+    fetchSpecificationDictionary = {}; 
+    name = ScolGroupeIncompatibilite; 
+    primaryKeyAttributes = (ggrpKey1, ggrpKey2); 
+    relationships = (
+        {
+            destination = ScolGroupeGrp; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = ggrpKey; sourceAttribute = ggrpKey1; }); 
+            name = scolGroupeGrp; 
+        }, 
+        {
+            destination = ScolGroupeGrp; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = ggrpKey; sourceAttribute = ggrpKey2; }); 
+            name = scolGroupeGrp0; 
+        }
+    ); 
+}

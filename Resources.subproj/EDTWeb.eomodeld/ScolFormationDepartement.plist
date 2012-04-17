@@ -1,0 +1,56 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = FDEP_ABREVIATION; 
+            externalType = VARCHAR2; 
+            name = fdomAbreviation; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 20; 
+        }, 
+        {
+            columnName = FDEP_CODE; 
+            externalType = VARCHAR2; 
+            name = fdomCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            columnName = FDEP_LIBELLE; 
+            externalType = VARCHAR2; 
+            internalInfo = {_nameInObjectStore = FDEP_LIBELLE; }; 
+            name = fdomLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            columnName = FDEP_VALIDITE; 
+            externalType = VARCHAR2; 
+            name = fdomValidite; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }
+    ); 
+    attributesUsedForLocking = (fdomAbreviation, fdomCode, fdomLibelle, fdomValidite); 
+    className = EOGenericRecord; 
+    classProperties = (fdomAbreviation, fdomCode, fdomLibelle, fdomValidite, scolFormationDiplomes); 
+    externalName = SCOLARITE.SCOL_FORMATION_DEPARTEMENT; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {_nameInObjectStore = SCOL_FORMATION_DEPARTEMENT; }; 
+    name = ScolFormationDepartement; 
+    primaryKeyAttributes = (fdomCode); 
+    relationships = (
+        {
+            deleteRule = EODeleteRuleNoAction; 
+            destination = ScolFormationDiplome; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = fdomCode; sourceAttribute = fdomCode; }); 
+            name = scolFormationDiplomes; 
+        }
+    ); 
+}

@@ -1,0 +1,107 @@
+{
+    attributes = (
+        {
+            columnName = "FSPN_KEY"; 
+            externalType = NUMBER; 
+            name = fspnKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = "FVOC_CODE"; 
+            externalType = VARCHAR2; 
+            name = fvocCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MPAR_ABREVIATION"; 
+            externalType = VARCHAR2; 
+            name = mparAbreviation; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 20; 
+        }, 
+        {
+            columnName = "MPAR_CODE"; 
+            externalType = VARCHAR2; 
+            name = mparCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 15; 
+        }, 
+        {
+            columnName = "MPAR_KEY"; 
+            externalType = NUMBER; 
+            name = mparKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = "MPAR_LIBELLE"; 
+            externalType = VARCHAR2; 
+            name = mparLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            columnName = "MPAR_VALIDITE"; 
+            externalType = VARCHAR2; 
+            name = mparValidite; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        fspnKey, 
+        fvocCode, 
+        mparAbreviation, 
+        mparCode, 
+        mparKey, 
+        mparLibelle, 
+        mparValidite
+    ); 
+    className = "org.cocktail.edtweb.server.metier.ScolMaquetteParcours"; 
+    classProperties = (
+        fspnKey, 
+        fvocCode, 
+        mparAbreviation, 
+        mparCode, 
+        mparKey, 
+        mparLibelle, 
+        mparValidite, 
+        scolFormationSpecialisation, 
+        scolMaquetteRepartitionSems
+    ); 
+    externalName = "SCOLARITE.SCOL_MAQUETTE_PARCOURS"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_javaClientClassName" = "org.cocktail.edtweb.server.client.ScolMaquetteParcours"; 
+        "_nameInObjectStore" = "SCOL_MAQUETTE_PARCOURS"; 
+    }; 
+    name = ScolMaquetteParcours; 
+    primaryKeyAttributes = (mparKey); 
+    relationships = (
+        {
+            destination = ScolFormationSpecialisation; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = fspnKey; sourceAttribute = fspnKey; }); 
+            name = scolFormationSpecialisation; 
+        }, 
+        {
+            destination = ScolMaquetteRepartitionSem; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = mparKey; sourceAttribute = mparKey; }); 
+            name = scolMaquetteRepartitionSems; 
+        }
+    ); 
+}

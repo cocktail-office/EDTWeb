@@ -1,0 +1,68 @@
+Conditional1: WOConditional {
+	condition = voirDemande;
+}
+
+Conditional2: WOConditional {
+	condition = suppressionOK;
+}
+
+Conditional3: WOConditional {
+	condition = suppressionOK;
+	negate = true;
+}
+
+Conditional4: WOConditional {
+	condition = voirDemande;
+	negate = true;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+FormFermer: WOForm {
+	action=fermerLaFenetre;
+	name="FormFermerLaFenetre";
+	target="pageprincipaleedtweb";
+}
+
+FormFermerEnt: WOForm {
+	action=fermerLaFenetre;
+	name="FormFermerLaFenetreEnt";
+}
+
+ButtonFermerFenetre: WOSubmitButton {
+	alt = "Fermer";
+	value = "Fermer la fen&ecirc;tre";
+	action = fermerLaFenetre;
+	class = "bouton";
+	onclick =btnFermerOnClick;
+	name = "BtnFermer";
+	escapeHTML = false;
+}
+
+ButtonFermerFenetreEnt: WOSubmitButton {
+	alt = "Fermer";
+	value = "Fermer";
+	action = fermerLaFenetre;
+	class = "bouton";
+	onclick =btnFermerEntOnClick;
+	name = "BtnFermerEnt";
+	escapeHTML = false;
+}
+
+String1: WOString {
+	value = erreurEnregistrement;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = supprimerResa;
+	class = "bouton";
+	value = "Oui";
+}
+
+SubmitButton2: WOSubmitButton {
+	class = "bouton";
+	value = "Non";
+	action = retour;
+}

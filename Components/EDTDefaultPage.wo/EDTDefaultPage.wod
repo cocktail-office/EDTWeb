@@ -1,0 +1,30 @@
+CRIDefaultPage1: CRIDefaultPage {
+	pageTitle = "Emploi du temps";
+	targetPosition = ^targetPosition;
+	mailLabel = "Pour tout commentaire, contacter :<br>";
+	useToolTip = ^useToolTip;
+}
+
+ComponentContent1: WOComponentContent {
+}
+
+LnkLogout: WOHyperlink {
+	action = session.logout;
+	title = "Fermer la session";
+}
+
+CondShowUserInfo: WOConditional {
+	condition = isShowUserInfo;
+}
+
+Menu1: Menu {
+}
+
+StrNomPrenom: WOString {
+	value = nomPrenom;
+}
+
+StrPageTitle: WOString {
+	value = titrePagePrincipale;
+	escapeHTML = false;
+}

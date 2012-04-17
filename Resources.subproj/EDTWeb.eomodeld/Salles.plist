@@ -1,0 +1,116 @@
+{
+    attributes = (
+        {
+            columnName = "C_LOCAL"; 
+            externalType = VARCHAR2; 
+            name = batCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            definition = "toBatiment.dDebVal"; 
+            externalType = DATE; 
+            name = batDebVal; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            definition = "toBatiment.dFinVal"; 
+            externalType = DATE; 
+            name = batFinVal; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            definition = "toBatiment.appellation"; 
+            externalType = VARCHAR2; 
+            name = batNom; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 50; 
+        }, 
+        {
+            columnName = "C_LOCAL"; 
+            externalType = VARCHAR2; 
+            name = cLocal; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            columnName = "SAL_ETAGE"; 
+            externalType = VARCHAR2; 
+            name = salEtage; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            columnName = "SAL_NUMERO"; 
+            externalType = NUMBER; 
+            name = salNumero; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = "SAL_PORTE"; 
+            externalType = VARCHAR2; 
+            name = salPorte; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            columnName = "SAL_RESERVABLE"; 
+            externalType = VARCHAR2; 
+            name = salReservable; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        batCode, 
+        batDebVal, 
+        batFinVal, 
+        batNom, 
+        salEtage, 
+        salNumero, 
+        salPorte, 
+        salReservable, 
+        cLocal
+    ); 
+    className = "org.cocktail.edtweb.server.metier.Salles"; 
+    classProperties = (
+        batCode, 
+        batDebVal, 
+        batFinVal, 
+        batNom, 
+        salEtage, 
+        salNumero, 
+        salPorte, 
+        salReservable, 
+        toBatiment, 
+        cLocal
+    ); 
+    externalName = "GRHUM.SALLES"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (batCode, salEtage, salNumero, salPorte, salReservable, toBatiment, cLocal); 
+    }; 
+    name = Salles; 
+    primaryKeyAttributes = (salNumero); 
+    relationships = (
+        {
+            destination = Batiment; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = batCode; sourceAttribute = batCode; }); 
+            name = toBatiment; 
+        }
+    ); 
+}

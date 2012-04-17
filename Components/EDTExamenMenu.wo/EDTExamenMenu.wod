@@ -1,0 +1,71 @@
+Conditional1: WOConditional {
+	condition = showGrade;
+	negate = true;
+}
+
+Conditional2: WOConditional {
+	condition = showGrade;
+}
+
+Form1: WOForm {
+	action = choixDuDomGrd;
+	name = "domGrde";
+	id = "domGrde";
+}
+
+GenericContainer1: WOGenericContainer {
+	class = classItemMenuSelected;
+	elementName = "FONT";
+}
+
+GenericContainer2: WOGenericContainer {
+	class = classItemMenuSelected;
+	elementName = "FONT";
+}
+
+Hyperlink1: WOHyperlink {
+	action = selectionDomaine;
+	class = classItemMenuSelected;
+	title = aDomaine.fdomLibelle;//valid
+}
+
+Hyperlink2: WOHyperlink {
+	class = classItemMenuSelected;
+	title = aGrade.fgraLibelle;//valid
+	action = selectionGrade;
+}
+
+Image1: WOImage {
+	filename = "img/mitem-close.gif";
+	framework = "CRIWebExt3";
+}
+
+Image2: WOImage {
+	filename = "img/mitem-close.gif";
+	framework = "CRIWebExt3";
+}
+
+PopUpButton1: WOPopUpButton {
+	item = aDomGrde;
+	list = listeDomGrde;
+	selection = choixDomGrde;
+	onChange = "javascript: document.forms.domGrde.submit();";
+}
+
+Repetition1: WORepetition {
+	item = aDomaine;
+	list = listeDommaine;
+}
+
+Repetition2: WORepetition {
+	item = aGrade;
+	list = listeGrade;
+}
+
+String1: WOString {
+	value = libelleItem;
+}
+
+String2: WOString {
+	value = libelleItem;
+}

@@ -1,0 +1,69 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = FGRA_ABREVIATION; 
+            externalType = VARCHAR2; 
+            name = fgraAbreviation; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 20; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = FGRA_CODAGE; 
+            externalType = VARCHAR2; 
+            name = fgraCodage; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 2; 
+        }, 
+        {
+            columnName = FGRA_CODE; 
+            externalType = VARCHAR2; 
+            name = fgraCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            columnName = FGRA_LIBELLE; 
+            externalType = VARCHAR2; 
+            name = fgraLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            columnName = FGRA_VALIDITE; 
+            externalType = VARCHAR2; 
+            name = fgraValidite; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }
+    ); 
+    attributesUsedForLocking = (fgraAbreviation, fgraCodage, fgraCode, fgraLibelle, fgraValidite); 
+    className = EOGenericRecord; 
+    classProperties = (
+        fgraAbreviation, 
+        fgraCodage, 
+        fgraCode, 
+        fgraLibelle, 
+        fgraValidite, 
+        scolFormationDiplomes
+    ); 
+    externalName = SCOLARITE.SCOL_FORMATION_GRADE; 
+    fetchSpecificationDictionary = {}; 
+    name = ScolFormationGrade; 
+    primaryKeyAttributes = (fgraCode); 
+    relationships = (
+        {
+            destination = ScolFormationDiplome; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = fgraCode; sourceAttribute = fgraCode; }); 
+            name = scolFormationDiplomes; 
+        }
+    ); 
+}

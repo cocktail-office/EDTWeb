@@ -1,0 +1,60 @@
+{
+    attributes = (
+        {
+            columnName = "C_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = cStructure; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "D_CREATION"; 
+            externalType = DATE; 
+            name = dCreation; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "D_MODIFICATION"; 
+            externalType = DATE; 
+            name = dModification; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = "PERS_ID"; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }
+    ); 
+    attributesUsedForLocking = (cStructure, dCreation, dModification, persId); 
+    className = "org.cocktail.edtweb.server.metier.RepartStructure"; 
+    classProperties = (cStructure, dCreation, dModification, individuUlr, persId, personne); 
+    externalName = "GRHUM.REPART_STRUCTURE"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_clientClassPropertyNames" = (individuUlr); }; 
+    name = RepartStructure; 
+    primaryKeyAttributes = (cStructure, persId); 
+    relationships = (
+        {
+            destination = IndividuUlr; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = persId; sourceAttribute = persId; }); 
+            name = individuUlr; 
+        }, 
+        {
+            destination = Personne; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = persId; sourceAttribute = persId; }); 
+            name = personne; 
+        }
+    ); 
+}

@@ -1,0 +1,104 @@
+{
+    attributes = (
+        {
+            columnName = "NO_INDIVIDU_CLIENT"; 
+            externalType = NUMBER; 
+            name = noIndividuClient; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "RESA_COMMENTAIRE"; 
+            externalType = VARCHAR2; 
+            name = resaCommentaire; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 255; 
+        }, 
+        {
+            columnName = "RESA_ETAT"; 
+            externalType = VARCHAR2; 
+            name = resaEtat; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            columnName = "RESA_KEY"; 
+            externalType = NUMBER; 
+            name = resaKey; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "RO_KEY"; 
+            externalType = NUMBER; 
+            name = roKey; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "TLOC_CODE"; 
+            externalType = VARCHAR2; 
+            name = tlocCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }
+    ); 
+    attributesUsedForLocking = (noIndividuClient, resaCommentaire, resaEtat, resaKey, roKey, tlocCode); 
+    className = "org.cocktail.edtweb.server.metier.VReservationObjet"; 
+    classProperties = (
+        individuUlr, 
+        noIndividuClient, 
+        occupants, 
+        resaCommentaire, 
+        resaEtat, 
+        resaKey, 
+        resaObjet, 
+        reservation, 
+        roKey, 
+        tlocCode
+    ); 
+    externalName = "EDTSCOL.V_RESERVATION_OBJET"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_javaClientClassName" = "org.cocktail.edtweb.client.metier.VReservationObjet"; 
+    }; 
+    name = VReservationObjet; 
+    primaryKeyAttributes = (resaKey); 
+    relationships = (
+        {
+            destination = IndividuUlr; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = noIndividu; sourceAttribute = noIndividuClient; }); 
+            name = individuUlr; 
+        }, 
+        {
+            destination = Occupant; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = resaKey; sourceAttribute = resaKey; }); 
+            name = occupants; 
+        }, 
+        {
+            destination = ResaObjet; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = roKey; sourceAttribute = roKey; }); 
+            name = resaObjet; 
+        }, 
+        {
+            destination = Reservation; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = resaKey; sourceAttribute = resaKey; }); 
+            name = reservation; 
+        }
+    ); 
+}

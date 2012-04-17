@@ -1,0 +1,11 @@
+CRILogin1: CRILogin {
+	loginResponder = loginRespondeur;
+}
+
+Image1: WOImage {
+	src = application.srcKeyULR;
+}
+
+String1: WOString {
+	value = nomIdentification;
+}

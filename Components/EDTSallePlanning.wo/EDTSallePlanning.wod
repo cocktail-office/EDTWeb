@@ -1,0 +1,43 @@
+AffichePlanning1: AffichePlanning {
+	heureFin = heureFin;
+	heureDebut = heureDebut;
+	dateDebut = dateDebut;
+	enConsultation = true;
+}
+
+Conditional1: WOConditional {
+	condition = salleSelected;
+}
+
+Conditional2: WOConditional {
+	condition = false;
+}
+
+Conditional4: WOConditional {
+	condition = salleSelected;
+	negate = true;
+}
+
+Image1: WOImage {
+	src = application.srcLigneJauneULR;
+}
+
+String1: WOString {
+	value = salleSelected.salPorte;
+}
+
+String2: WOString {
+	value = salleSelected.salEtage;
+}
+
+String3: WOString {
+	value = salleSelected.batNom;
+}
+
+SwitchComponent1: WOSwitchComponent {
+	heureFin = heureFin;
+	heureDebut = heureDebut;
+	dateDebut = dateDebut;
+	enConsultation = true;
+	WOComponentName = planning;
+}

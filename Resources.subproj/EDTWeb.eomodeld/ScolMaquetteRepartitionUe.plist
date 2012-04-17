@@ -1,0 +1,166 @@
+{
+    attributes = (
+        {
+            columnName = FANN_KEY; 
+            externalType = NUMBER; 
+            name = fannKey; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = MRUE_BONIFIABLE; 
+            externalType = NUMBER; 
+            name = mrueBonifiable; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = MRUE_COEFFICIENT; 
+            externalType = NUMBER; 
+            name = mrueCoefficient; 
+            precision = 5; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            columnName = MRUE_COMPTABILISABLE; 
+            externalType = NUMBER; 
+            name = mrueComptabilisable; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = MRUE_KEY; 
+            externalType = NUMBER; 
+            name = mrueKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = MRUE_NOTE_BASE; 
+            externalType = NUMBER; 
+            name = mrueNoteBase; 
+            precision = 5; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = MRUE_NOTE_ELIMINATION; 
+            externalType = NUMBER; 
+            name = mrueNoteElimination; 
+            precision = 5; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            columnName = MRUE_NOTE_OBTENTION; 
+            externalType = NUMBER; 
+            name = mrueNoteObtention; 
+            precision = 5; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            columnName = MRUE_ORDRE; 
+            externalType = NUMBER; 
+            name = mrueOrdre; 
+            precision = 2; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = MSEM_KEY; 
+            externalType = NUMBER; 
+            name = msemKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = MUE_KEY; 
+            externalType = NUMBER; 
+            name = mueKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        fannKey, 
+        mrueBonifiable, 
+        mrueCoefficient, 
+        mrueComptabilisable, 
+        mrueKey, 
+        mrueNoteBase, 
+        mrueNoteElimination, 
+        mrueNoteObtention, 
+        mrueOrdre, 
+        msemKey, 
+        mueKey
+    ); 
+    className = EOGenericRecord; 
+    classProperties = (
+        fannKey, 
+        mrueBonifiable, 
+        mrueCoefficient, 
+        mrueComptabilisable, 
+        mrueKey, 
+        mrueNoteBase, 
+        mrueNoteElimination, 
+        mrueNoteObtention, 
+        mrueOrdre, 
+        msemKey, 
+        mueKey, 
+        scolMaquetteSemestre, 
+        scolMaquetteUe
+    ); 
+    externalName = SCOLARITE.SCOL_MAQUETTE_REPARTITION_UE; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        _clientClassPropertyNames = (
+            fannKey, 
+            mrueBonifiable, 
+            mrueCoefficient, 
+            mrueComptabilisable, 
+            mrueKey, 
+            mrueNoteBase, 
+            mrueNoteElimination, 
+            mrueNoteObtention, 
+            mrueOrdre, 
+            msemKey, 
+            mueKey, 
+            scolMaquetteSemestre, 
+            scolMaquetteUe
+        ); 
+        _nameInObjectStore = SCOL_MAQUETTE_REPARTITION_UE; 
+    }; 
+    name = ScolMaquetteRepartitionUe; 
+    primaryKeyAttributes = (mrueKey); 
+    relationships = (
+        {
+            destination = ScolMaquetteSemestre; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = msemKey; sourceAttribute = msemKey; }); 
+            name = scolMaquetteSemestre; 
+        }, 
+        {
+            destination = ScolMaquetteUe; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = mueKey; sourceAttribute = mueKey; }); 
+            name = scolMaquetteUe; 
+        }
+    ); 
+}

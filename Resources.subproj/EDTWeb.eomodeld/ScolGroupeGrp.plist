@@ -1,0 +1,157 @@
+{
+    attributes = (
+        {
+            columnName = "GCOL_KEY"; 
+            externalType = NUMBER; 
+            name = gcolKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = "GGRP_CODE"; 
+            externalType = VARCHAR2; 
+            name = ggrpCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 20; 
+        }, 
+        {
+            columnName = "GGRP_DATE_DEBUT"; 
+            externalType = NUMBER; 
+            name = ggrpDateDebut; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "GGRP_DATE_FIN"; 
+            externalType = NUMBER; 
+            name = ggrpDateFin; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "GGRP_INT_CAPACITE"; 
+            externalType = NUMBER; 
+            name = ggrpIntCapacite; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = "GGRP_KEY"; 
+            externalType = NUMBER; 
+            name = ggrpKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "GGRP_LIBELLE"; 
+            externalType = VARCHAR2; 
+            name = ggrpLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "GGRP_MAX_CAPACITE"; 
+            externalType = NUMBER; 
+            name = ggrpMaxCapacite; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = "GGRP_MAX_TEMOIN"; 
+            externalType = VARCHAR2; 
+            name = ggrpMaxTemoin; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        gcolKey, 
+        ggrpCode, 
+        ggrpDateDebut, 
+        ggrpDateFin, 
+        ggrpIntCapacite, 
+        ggrpKey, 
+        ggrpLibelle, 
+        ggrpMaxCapacite, 
+        ggrpMaxTemoin
+    ); 
+    className = "org.cocktail.edtweb.server.metier.ScolGroupeGrp"; 
+    classProperties = (
+        ggrpCode, 
+        ggrpDateDebut, 
+        ggrpDateFin, 
+        ggrpIntCapacite, 
+        ggrpKey, 
+        ggrpLibelle, 
+        ggrpMaxCapacite, 
+        ggrpMaxTemoin, 
+        scolGroupeCollection, 
+        scolGroupeIncompatibilites, 
+        scolGroupeObjets, 
+        scolInscriptionGrps
+    ); 
+    externalName = "SCOLARITE.SCOL_GROUPE_GRP"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (
+            ggrpCode, 
+            ggrpDateDebut, 
+            ggrpDateFin, 
+            ggrpIntCapacite, 
+            ggrpKey, 
+            ggrpLibelle, 
+            ggrpMaxCapacite, 
+            ggrpMaxTemoin, 
+            scolGroupeCollection, 
+            scolGroupeIncompatibilites, 
+            scolGroupeObjets, 
+            scolInscriptionGrps
+        ); 
+    }; 
+    name = ScolGroupeGrp; 
+    primaryKeyAttributes = (ggrpKey); 
+    relationships = (
+        {
+            destination = ScolGroupeCollection; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = gcolKey; sourceAttribute = gcolKey; }); 
+            name = scolGroupeCollection; 
+        }, 
+        {
+            destination = ScolGroupeIncompatibilite; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = ggrpKey1; sourceAttribute = ggrpKey; }); 
+            name = scolGroupeIncompatibilites; 
+        }, 
+        {
+            destination = ScolGroupeObjet; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = ggrpKey; sourceAttribute = ggrpKey; }); 
+            name = scolGroupeObjets; 
+        }, 
+        {
+            destination = ScolInscriptionGrp; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = ggrpKey; sourceAttribute = ggrpKey; }); 
+            name = scolInscriptionGrps; 
+        }
+    ); 
+}

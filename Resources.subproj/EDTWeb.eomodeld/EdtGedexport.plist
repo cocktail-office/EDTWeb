@@ -1,0 +1,54 @@
+{
+    attributes = (
+        {
+            columnName = D_CREATION; 
+            externalType = DATE; 
+            name = dCreation; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = D_MODIFICATION; 
+            externalType = DATE; 
+            name = dModification; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = DOC_ID; 
+            externalType = NUMBER; 
+            name = docId; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = EG_KEY; 
+            externalType = NUMBER; 
+            name = egKey; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = MOT_CLEF; 
+            externalType = VARCHAR2; 
+            name = motClef; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 512; 
+        }, 
+        {
+            columnName = NO_INDIVIDU; 
+            externalType = NUMBER; 
+            name = noIndividu; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }
+    ); 
+    attributesUsedForLocking = (dCreation, dModification, docId, egKey, motClef, noIndividu); 
+    className = EOGenericRecord; 
+    classProperties = (dCreation, dModification, docId, motClef, noIndividu); 
+    externalName = EDTSCOL.EDT_GEDEXPORT; 
+    fetchSpecificationDictionary = {}; 
+    name = EdtGedexport; 
+    primaryKeyAttributes = (egKey); 
+}

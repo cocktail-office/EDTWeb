@@ -1,0 +1,149 @@
+{
+    EOModelVersion = "2.1"; 
+    adaptorName = JDBC; 
+    connectionDictionary = {URL = ""; driver = ""; password = ""; plugin = ""; username = ""; }; 
+    entities = (
+        {className = "org.cocktail.edtweb.server.metier.Adresse"; name = Adresse; }, 
+        {className = EOGenericRecord; name = Batiment; }, 
+        {className = EOGenericRecord; name = EdtGedexport; }, 
+        {className = EOGenericRecord; name = FournisUlr; }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.GarnucheParametres"; 
+            name = GarnucheParametres; 
+        }, 
+        {className = EOGenericRecord; name = ImplantationGeo; }, 
+        {className = EOGenericRecord; name = IndividuAgenda; }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.IndividuUlr"; 
+            name = IndividuUlr; 
+        }, 
+        {className = "org.cocktail.edtweb.server.metier.Occupant"; name = Occupant; }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.Periodicite"; 
+            name = Periodicite; 
+        }, 
+        {className = "org.cocktail.edtweb.server.metier.Personne"; name = Personne; }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.PersonneTelephone"; 
+            name = PersonneTelephone; 
+        }, 
+        {className = EOGenericRecord; name = PhotosEmployes; }, 
+        {className = EOGenericRecord; name = PhotosEtudiants; }, 
+        {className = EOGenericRecord; name = QuotaRepartValeurTobj; }, 
+        {className = EOGenericRecord; name = RepartBatImpGeo; }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.RepartStructure"; 
+            name = RepartStructure; 
+        }, 
+        {className = EOGenericRecord; name = ResaExamen; }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.ResaFamilleObjet"; 
+            name = ResaFamilleObjet; 
+        }, 
+        {className = "org.cocktail.edtweb.server.metier.ResaObjet"; name = ResaObjet; }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.ResaObjetDepositaire"; 
+            name = ResaObjetDepositaire; 
+        }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.ResaObjetReserve"; 
+            name = ResaObjetReserve; 
+        }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.ResaSalles"; 
+            name = ResaSalles; 
+        }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.ResaTypeObjet"; 
+            name = ResaTypeObjet; 
+        }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.Reservation"; 
+            name = Reservation; 
+        }, 
+        {className = EOGenericRecord; name = ReservationAp; }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.ReservationObjet"; 
+            name = ReservationObjet; 
+        }, 
+        {className = "org.cocktail.edtweb.server.metier.Salles"; name = Salles; }, 
+        {className = EOGenericRecord; name = ScolExamenEntete; }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.ScolFormationAnnee"; 
+            name = ScolFormationAnnee; 
+        }, 
+        {className = EOGenericRecord; name = ScolFormationDepartement; }, 
+        {className = EOGenericRecord; name = ScolFormationDiplome; }, 
+        {className = EOGenericRecord; name = ScolFormationDomaine; }, 
+        {className = EOGenericRecord; name = ScolFormationFiliere; }, 
+        {className = EOGenericRecord; name = ScolFormationGrade; }, 
+        {className = EOGenericRecord; name = ScolFormationHabilitation; }, 
+        {className = EOGenericRecord; name = ScolFormationSpecialisation; }, 
+        {className = EOGenericRecord; name = ScolGroupeCollection; }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.ScolGroupeGrp"; 
+            name = ScolGroupeGrp; 
+        }, 
+        {className = EOGenericRecord; name = ScolGroupeInclusion; }, 
+        {className = EOGenericRecord; name = ScolGroupeIncompatibilite; }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.ScolGroupeObjet"; 
+            name = ScolGroupeObjet; 
+        }, 
+        {className = EOGenericRecord; name = ScolInscriptionAp; }, 
+        {className = EOGenericRecord; name = ScolInscriptionEtudiant; }, 
+        {className = EOGenericRecord; name = ScolInscriptionExamen; }, 
+        {className = EOGenericRecord; name = ScolInscriptionGrp; }, 
+        {className = EOGenericRecord; name = ScolMaquetteAp; }, 
+        {className = EOGenericRecord; name = ScolMaquetteEc; }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.ScolMaquetteParcours"; 
+            name = ScolMaquetteParcours; 
+        }, 
+        {className = EOGenericRecord; name = ScolMaquetteRepartitionAp; }, 
+        {className = EOGenericRecord; name = ScolMaquetteRepartitionEc; }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.ScolMaquetteRepartitionSem"; 
+            name = ScolMaquetteRepartitionSem; 
+        }, 
+        {className = EOGenericRecord; name = ScolMaquetteRepartitionUe; }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.ScolMaquetteSemestre"; 
+            name = ScolMaquetteSemestre; 
+        }, 
+        {className = EOGenericRecord; name = ScolMaquetteUe; }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.Secretariat"; 
+            name = Secretariat; 
+        }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.StructureUlr"; 
+            name = StructureUlr; 
+        }, 
+        {
+            className = "org.cocktail.edtweb.server.metier.VReservationObjet"; 
+            name = VReservationObjet; 
+        }
+    ); 
+    userInfo = {
+        "_EntityModeler" = {
+            activeDatabaseConfigName = Default; 
+            databaseConfigs = {
+                Default = {
+                    adaptorName = JDBC; 
+                    connectionDictionary = {URL = ""; driver = ""; password = ""; plugin = ""; username = ""; }; 
+                }; 
+                gestest = {
+                    adaptorName = JDBC; 
+                    connectionDictionary = {
+                        URL = "jdbc:oracle:thin:@jane.univ-lr.fr:1521:gestest"; 
+                        password = ""; 
+                        username = garnuche; 
+                    }; 
+                }; 
+            }; 
+            reverseEngineered = Y; 
+        }; 
+        modelId = EDTSCOL; 
+    }; 
+}

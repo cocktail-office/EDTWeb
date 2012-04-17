@@ -1,0 +1,85 @@
+AffichePlanning1: AffichePlanning {
+	dateDebut = dateDebut;
+	heureDebut = heureDebut;
+	heureFin = heureFin;
+	titrePlanning = titrePlanning;
+	enConsultation = true;
+}
+
+CRIDatePicker1: CRIDatePicker {
+	dateValue = dateDebut;
+	fieldName = "dateDebut";
+	formName = "formDateDebut";
+}
+
+Conditional1: WOConditional {
+	condition = false;
+}
+
+Conditional2: WOConditional {
+	condition = showPlanning;
+}
+
+Conditional3: WOConditional {
+	condition = addButtonMiseAJour;
+}
+
+Form1: WOForm {
+	name = "formDateDebut";
+	id = "formDateDebut";
+}
+
+Form2: WOForm {
+	name = "formDateDebut";
+	multipleSubmit = true;
+	id = "formDateDebut";
+}
+
+Image1: WOImage {
+	src = application.srcLigneJauneULR;
+	height = 2;
+	width = "100%";
+}
+
+String1: WOString {
+	value = session.connectedUserInfo.nomEtPrenom;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = refresh;
+	class = "bouton";
+	value = "Afficher le planning correspondant";
+}
+
+SubmitButton2: WOSubmitButton {
+	action = refresh;
+	class = "bouton";
+	value = "rafraichir";
+}
+
+SubmitButton3: WOSubmitButton {
+	action = refresh;
+	value = "mettre a jour";
+	class = "bouton";
+}
+
+SwitchComponent1: WOSwitchComponent {
+	WOComponentName = planning;
+	dateDebut = dateDebut;
+	heureDebut = heureDebut;
+	heureFin = heureFin;
+}
+
+TextField2: WOTextField {
+	align = "right";
+	maxlength = 2;
+	size = 3;
+	value = heureDebut;
+}
+
+TextField3: WOTextField {
+	align = "right";
+	maxlength = 2;
+	size = 3;
+	value = heureFin;
+}
